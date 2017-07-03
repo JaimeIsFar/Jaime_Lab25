@@ -1,6 +1,5 @@
 rm(list=ls())
-#setwd("D:/APLICACION/EXP2")
-setwd("G:/APLICACION/EXP2")
+setwd("C:/Users/Laboratorio25_2/Desktop/Jaime_Lab25/Datos")
 library("grDevices", lib.loc="C:/Program Files/R/R-3.1.1/library")
 Data <- read.csv("Datac.csv")
 
