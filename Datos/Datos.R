@@ -1,7 +1,8 @@
 rm(list=ls())
 #setwd("D:/APLICACION/EXP2")
-setwd("G:/APLICACION/EXP2")
-library("grDevices", lib.loc="C:/Program Files/R/R-3.1.1/library")
+setwd("C:/Users/Alejandro/Desktop/Jaime_Lab25/Datos")
+dir()
+library("grDevices", lib.loc="C:/Program Files/R/R-3.2.2/library")
 Data <- read.csv("Datac.csv")
 
 #### Data Matrix ####
