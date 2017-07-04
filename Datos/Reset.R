@@ -229,34 +229,88 @@ MBarAP[,2] <- MDAP23
 ##############################################
 #Verificando Efecto Reset
 ##############################################
+##############################################
 
 #Arreglos sin participante ruidoso
 C1_x <- C1[,-3]        #Elecciones P1 excepto No.3
-B1_x <- B1[,-c(5,6)]  #Creencias Crudas sobre P2 y P3; excepto para el P1-3
-BO1_x <- BO1[,-3]
+B1_x <- B1[,-c(5,6)]   #Creencias Crudas sobre P2 y P3; excepto para el P1-3
+BO1_x <- BO1[,-3]      #Creencias Promedio sobre P2 y P3; excepto para el P1-3
+BOP1_x <- BOP1[,-3]    #Creencias Promedio P2-P3 * P  (Sin P1-3)
+BA1_x <- BA1[,-3]      #Creencias Promedio P2-P3 Y P1 (Excepto para P1-3)
+BAP1_x <- BAP1[,-3]    #Creencias Promedio P2-P3 y P1 * P (Excepto para P1-3)
 
 #Reset en Elecciones
 Reset_ch<- data.frame(cbind(C1[4,], C1[5,]))
 choices_r <- stack(Reset_ch)
-t.test(values~ind,data=choices_r,alternative = c("less"))
+Reset_choices <- t.test(values~ind,data=choices_r,alternative = c("less"))
 #Reset en Elecciones SIN soquete
 Reset_ch<- data.frame(cbind(C1_x[4,], C1_x[5,]))
 choices_r <- stack(Reset_ch)
-t.test(values~ind,data=choices_r,alternative = c("less"))
+Reset_choices_x <- t.test(values~ind,data=choices_r,alternative = c("less"))
 
 #Reset en las Creencias Crudas del PArticipante 1 
 Reset_bel<- data.frame(cbind(B1[4,], B1[5,]))
 belief_r <- stack(Reset_bel)
-t.test(values~ind,data=belief_r,alternative = c("less"))
+Raw_beliefs <- t.test(values~ind,data=belief_r,alternative = c("less"))
 #Reset en las Creencias SIN soquete
 Reset_bel<- data.frame(cbind(B1_x[4,], B1_x[5,]))
 belief_r <- stack(Reset_bel)
-t.test(values~ind,data=belief_r,alternative = c("less"))
+Raw_beliefs_x <- t.test(values~ind,data=belief_r,alternative = c("less"))
 
-
+#Reset en el Promedio de las Creencias de P2 y P3 por el Participante 1
 Reset_bel_2<- data.frame(cbind(BO1[4,], BO1[5,]))
 belief_rmean <- stack(Reset_bel_2)
-t.test(values~ind,data=belief_rmean,alternative = c("less"))
+Mean_Belief <- t.test(values~ind,data=belief_rmean,alternative = c("less"))
+#Reset en Promedio de Creencias P2 y P3 sin P1-3
 Reset_bel_2<- data.frame(cbind(BO1_x[4,], BO1_x[5,]))
 belief_rmean <- stack(Reset_bel_2)
-t.test(values~ind,data=belief_rmean,alternative = c("less"))
+Mean_Belief_x <- t.test(values~ind,data=belief_rmean,alternative = c("less"))
+
+#Reset en Creencias PRomedio sobre P1 y P2 *P
+Reset_belOthersP<- data.frame(cbind(BOP1[4,], BOP1[5,]))
+belief_OthersP <- stack(Reset_belOthersP)
+Others_BeliefP <- t.test(values~ind,data=belief_OthersP,alternative = c("less"))
+#Sin P1-3
+Reset_belOthersP<- data.frame(cbind(BOP1_x[4,], BOP1_x[5,]))
+belief_OthersP <- stack(Reset_belOthersP)
+Others_BeliefP_x <- t.test(values~ind,data=belief_OthersP,alternative = c("less"))
+
+#Reset en el Promedio TOTAL (P2, P3... y P1)
+Reset_belAll<- data.frame(cbind(BA1[4,], BA1[5,]))
+belief_All <- stack(Reset_belAll)
+All_Beliefs <- t.test(values~ind,data=belief_All,alternative = c("less"))
+#Sin P1-3
+Reset_belAll<- data.frame(cbind(BA1_x[4,], BA1_x[5,]))
+belief_All <- stack(Reset_belAll)
+All_Beliefs_x <- t.test(values~ind,data=belief_All,alternative = c("less"))
+
+#Reset en el Promedio TOTAL * P
+Reset_belAllP<- data.frame(cbind(BAP1[4,], BAP1[5,]))
+belief_AllP <- stack(Reset_belAllP)
+AllP_Beliefs <- t.test(values~ind,data=belief_AllP,alternative = c("less"))
+#Sin P1-3
+Reset_belAllP<- data.frame(cbind(BAP1_x[4,], BAP1_x[5,]))
+belief_AllP <- stack(Reset_belAllP)
+AllP_Beliefs_x <- t.test(values~ind,data=belief_AllP,alternative = c("less"))
+
+#Reset en la Diferencia 
+
+#########################################
+##### Resumen de las T-Test
+#########################################
+
+#T-Test for Reset Effect (Total)
+Reset_choices$p.value           #Reset en Elecciones P1
+Raw_beliefs$p.value             #Reset en Creencias Crudas P2-P3    
+Mean_Belief$p.value             #Reset en Promedio Creencias P2-P3
+Others_BeliefP$p.value          #Promedio P2-P3 * P
+All_Beliefs$p.value             #Promedio P2-P3 Y P1
+AllP_Beliefs$p.value            #Promedio P2-P3 y P1 * P
+
+#T-Test for the Reset Effect (Without Participant 3)
+Reset_choices_x$p.value         #Reset en Elecciones P1
+Raw_beliefs_x$p.value           #Reset en Creencias Crudas P2-P3
+Mean_Belief_x$p.value           #Reset en Promedio Creencias P2-P3
+Others_BeliefP_x$p.value        #Promedio P2-P3 * P
+All_Beliefs_x$p.value           #Promedio P2-P3 y P1
+AllP_Beliefs_x$p.value          #Promedio P2-P3 y p1 * P
