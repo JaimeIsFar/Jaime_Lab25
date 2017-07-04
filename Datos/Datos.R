@@ -5,11 +5,12 @@ Data <- read.csv("Datac.csv")
 
 #### Data Matrix ####
 
-C1 <- matrix(data=NA, nrow=8, ncol=10)     #ChosenNumber by Player1 each Period(row) and Sesion(col)
-C2 <- matrix(data=NA, nrow=8, ncol=10)     #ChosenNumber by Player2 each Period(row) and Sesion(col)
-C3 <- matrix(data=NA, nrow=8, ncol=10)     #ChosenNumber by Player3 each Period(row) and Sesion(col)
-MC1 <- matrix(data=NA, nrow=8, ncol=1)     #Average ChosenNumber by Player1 each Period(row) and Sesion(col)
-MC23 <- matrix(data=NA, nrow=8, ncol=1)    #Average ChosenNumber by Player2&3 each Period(row) and Sesion(col)
+C1 <- matrix(data=NA, nrow=8, ncol=10)      #ChosenNumber by Player1 each Period(row) and Sesion(col)
+C2 <- matrix(data=NA, nrow=8, ncol=10)      #ChosenNumber by Player2 each Period(row) and Sesion(col)
+C3 <- matrix(data=NA, nrow=8, ncol=10)      #ChosenNumber by Player3 each Period(row) and Sesion(col)
+MC1 <- matrix(data=NA, nrow=8, ncol=1)      #Average ChosenNumber by Player1 each Period(row) and Sesion(col)
+MC23 <- matrix(data=NA, nrow=8, ncol=1)     #Average ChosenNumber by Player2&3 each Period(row) and Sesion(col)
+MC123 <- matrix(data=NA, nrow=8, ncol=1)    #Average ChosenNumber by All players each Period(row) and Sesion(col)
 
 B1 <- matrix(data=NA, nrow=8, ncol=20)    #RawBeliefs by Player1 each Period(row) and Sesion(col)
 B2 <- matrix(data=NA, nrow=8, ncol=20)    #RawBeliefs by Player2 each Period(row) and Sesion(col)
@@ -148,6 +149,7 @@ SD3[a,b] <- D3[1]
 
 MC1[a,1] <- mean(C1[a,])
 MC23[a,1] <- mean(c(C2[a,],C3[a,]))
+MC123[a,1] <- mean(c(C1[a,],C2[a,],C3[a,]))
 
 MBO1[a,1] <- mean(BO1[a,])
 MBO23[a,1] <- mean(c(BO2[a,],BO3[a,]))
@@ -223,3 +225,77 @@ MBarA[,1] <- MDA1
 MBarA[,2] <- MDA23
 MBarAP[,1] <- MDAP1
 MBarAP[,2] <- MDAP23
+
+#C1 <- C1[,-3]                      #Comenta toda esta sección cuando no la uses
+#BO1 <- BO1[,-3]                    #Esta sección elimina al sujeto problemático 3
+#BOP1 <- BOP1[,-3]
+#BA1 <- BA1[,-3]
+#BAP1 <- BAP1[,-3]
+
+T_diferencias <- matrix(data=NA, nrow=8, ncol=8) #t-test of diffs in choices & beliefs in all periods in 4 conditions
+dimnames(T_diferencias) = list(c(1:8),c("BO1 t","BO1 p","BOP1 t","BOP1 p","BA1 t","BA1 p","BAP1 t","BAP1 p"))
+
+for (a in 1:8){
+dC1vsBO1 <- data.frame(cbind(C1[a,],BO1[a,]))
+dC1vsBO1 <- stack(dC1vsBO1)
+dC1vsBO1 <- t.test(values~ind,data=dC1vsBO1)
+T_diferencias[a,1] <- dC1vsBO1$statistic
+T_diferencias[a,2] <- dC1vsBO1$p.value
+}
+for (a in 1:8){
+  dC1vsBOP1 <- data.frame(cbind(C1[a,],BOP1[a,]))
+  dC1vsBOP1 <- stack(dC1vsBOP1)
+  dC1vsBOP1 <- t.test(values~ind,data=dC1vsBOP1)
+  T_diferencias[a,3] <- dC1vsBOP1$statistic
+  T_diferencias[a,4] <- dC1vsBOP1$p.value
+}
+for (a in 1:8){
+  dC1vsBA1 <- data.frame(cbind(C1[a,],BA1[a,]))
+  dC1vsBA1 <- stack(dC1vsBA1)
+  dC1vsBA1 <- t.test(values~ind,data=dC1vsBA1)
+  T_diferencias[a,5] <- dC1vsBA1$statistic
+  T_diferencias[a,6] <- dC1vsBA1$p.value
+}
+for (a in 1:8){
+  dC1vsBAP1 <- data.frame(cbind(C1[a,],BAP1[a,]))
+  dC1vsBAP1 <- stack(dC1vsBAP1)
+  dC1vsBAP1 <- t.test(values~ind,data=dC1vsBAP1)
+  T_diferencias[a,7] <- dC1vsBAP1$statistic
+  T_diferencias[a,8] <- dC1vsBAP1$p.value
+}
+
+AC123 <- matrix(data=NA, nrow=8, ncol=10)  #Average of choices of all players each Period(row) and Sesion(col)
+for (a in 1:8){
+  for (b in 1:10){
+    AC123[a,b] <- mean(c(C1[a,b],C2[a,b],C3[a,b]))
+  }
+}
+
+DO1x <- DO1 #/ AC123
+DOP1x <- DOP1 #/ AC123
+DA1x <- DA1 #/ AC123
+DAP1x <- DAP1 #/ AC123
+
+T_diferencias0 <- matrix(data=NA, nrow=8, ncol=8) #t-test of diffs againts 0 in all periods in 4 conditions
+dimnames(T_diferencias0) = list(c(1:8),c("DO1 t","DO1 p","DOP1 t","DOP1 p","DA1 t","DA1 p","DAP1 t","DAP1 p"))
+
+for (a in 1:8){
+  DO1t <- t.test(DO1x[a,])
+  T_diferencias0[a,1] <- DO1t$statistic
+  T_diferencias0[a,2] <- DO1t$p.value
+}
+for (a in 1:8){
+  DOP1t <- t.test(DOP1x[a,])
+  T_diferencias0[a,3] <- DOP1t$statistic
+  T_diferencias0[a,4] <- DOP1t$p.value
+}
+for (a in 1:8){
+  DA1t <- t.test(DA1x[a,])
+  T_diferencias0[a,5] <- DA1t$statistic
+  T_diferencias0[a,6] <- DA1t$p.value
+}
+for (a in 1:8){
+  DAP1t <- t.test(DAP1x[a,])
+  T_diferencias0[a,7] <- DAP1t$statistic
+  T_diferencias0[a,8] <- DAP1t$p.value
+}
