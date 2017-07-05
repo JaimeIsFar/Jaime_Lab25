@@ -1,3 +1,18 @@
+##### En esta versión todas las diferencias usan valores absolutos
+
+DO1 <- abs(DO1)
+DO2 <- abs(DO2)
+DO3 <- abs(DO3)
+DOP1 <- abs(DOP1)
+DOP2 <- abs(DOP2)
+DOP3 <- abs(DOP3)
+DA1 <- abs(DA1)
+DA2 <- abs(DA2)
+DA3 <- abs(DA3)
+DAP1 <- abs(DAP1)
+DAP2 <- abs(DAP2)
+DAP3 <- abs(DAP3)
+
 #t-test de comparación entre las diferencias de creencias y elecciones de experimentado vs no experimentados,
 # todas las sesiones
 
@@ -6,8 +21,8 @@ dimnames(T_diferenciasD1vs23) = list(c(1:8),c("BO1 t","BO1 p","BOP1 t","BOP1 p",
 
 DO23 <- matrix(data=NA, nrow=8,ncol=20) #diferencias de jugador 2 y 3 en una sola matriz
 for(a in 1:8){for(b in 1:10){
-DO23[a,b] <- DO2[a,b]
-DO23[a,b+10] <- DO3[a,b]
+  DO23[a,b] <- DO2[a,b]
+  DO23[a,b+10] <- DO3[a,b]
 }}
 DOP23 <- matrix(data=NA, nrow=8,ncol=20) #diferencias de jugador 2 y 3 en una sola matriz
 for(a in 1:8){for(b in 1:10){
