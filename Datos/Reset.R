@@ -1,6 +1,6 @@
 rm(list=ls())
 #setwd("D:/APLICACION/EXP2")
-setwd("C:/Users/Adriana/Desktop/Jaime_Lab25/Datos")
+setwd("C:/Users/Alejandro/Desktop/Jaime_Lab25/Datos")
 dir()
 library("grDevices", lib.loc="C:/Program Files/R/R-3.2.2/library")
 Data <- read.csv("Datac.csv")
@@ -13,7 +13,7 @@ Data <- read.csv("Datac.csv")
 
 #### Empty Data Matrix ####
 C1 <- matrix(data=NA, nrow=8, ncol=10)     #ChosenNumber by Player1 each Period(row) and Sesion(col)
-B1 <- matrix(data=NA, nrow=8, ncol=20)    #RawBeliefs by Player1 each Period(row) and Sesion(col)
+B1 <- matrix(data=NA, nrow=8, ncol=20)     #RawBeliefs by Player1 each Period(row) and Sesion(col)
 BO1 <- matrix(data=NA, nrow=8, ncol=10)    #MeanBeliefs of Others by Player1 each Period(row) and Sesion(col)
 BOP1 <- matrix(data=NA, nrow=8, ncol=10)   #MeanBeliefs of Others*P by Player1 each Period(row) and Sesion(col)
 BA1 <- matrix(data=NA, nrow=8, ncol=10)    #MeanBeliefs of All by Player1 each Period(row) and Sesion(col)
@@ -140,7 +140,6 @@ Mean_Belief$p.value             #Reset en Promedio Creencias P2-P3
 Others_BeliefP$p.value          #Promedio P2-P3 * P
 All_Beliefs$p.value             #Promedio P2-P3 Y P1
 AllP_Beliefs$p.value            #Promedio P2-P3 y P1 * P
-DiffOthers_Reset$p.value        #Diferencia (P2-P3) - P1
 
 #T-Test for the Reset Effect (Without Participant 3)
 Reset_choices_x$p.value         #Reset en Elecciones P1
@@ -149,7 +148,6 @@ Mean_Belief_x$p.value           #Reset en Promedio Creencias P2-P3
 Others_BeliefP_x$p.value        #Promedio P2-P3 * P
 All_Beliefs_x$p.value           #Promedio P2-P3 y P1
 AllP_Beliefs_x$p.value          #Promedio P2-P3 y p1 * P
-DiffOthers_Reset_x$p.value      #Diferencia (P2-P3) - P1 
 
 
 ###############################################################
