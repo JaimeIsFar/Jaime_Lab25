@@ -77,56 +77,56 @@ BAP1_x <- BAP1[,-3]    #Creencias Promedio P2-P3 y P1 * P (Excepto para P1-3)
 #C1 = Reset en Elecciones
 Reset_ch<- data.frame(cbind(C1[4,], C1[5,]))
 choices_r <- stack(Reset_ch)
-Reset_choices <- t.test(values~ind,data=choices_r,alternative = c("less"))
+Reset_choices <- t.test(values~ind,data=choices_r,alternative = c("less"), paired=TRUE)
 #Reset en Elecciones SIN soquete
 Reset_ch<- data.frame(cbind(C1_x[4,], C1_x[5,]))
 choices_r <- stack(Reset_ch)
-Reset_choices_x <- t.test(values~ind,data=choices_r,alternative = c("less"))
+Reset_choices_x <- t.test(values~ind,data=choices_r,alternative = c("less"), paired=TRUE)
 
 #B1 = Reset en las Creencias Crudas del PArticipante 1 
 Reset_bel<- data.frame(cbind(B1[4,], B1[5,]))
 belief_r <- stack(Reset_bel)
-Raw_beliefs <- t.test(values~ind,data=belief_r,alternative = c("less"))
+Raw_beliefs <- t.test(values~ind,data=belief_r,alternative = c("less"), paired=TRUE)
 #Reset en las Creencias SIN soquete
 Reset_bel<- data.frame(cbind(B1_x[4,], B1_x[5,]))
 belief_r <- stack(Reset_bel)
-Raw_beliefs_x <- t.test(values~ind,data=belief_r,alternative = c("less"))
+Raw_beliefs_x <- t.test(values~ind,data=belief_r,alternative = c("less"), paired=TRUE)
 
 #BO1 = Reset en el Promedio de las Creencias de P2 y P3 por el Participante 1
 Reset_bel_2<- data.frame(cbind(BO1[4,], BO1[5,]))
 belief_rmean <- stack(Reset_bel_2)
-Mean_Belief <- t.test(values~ind,data=belief_rmean,alternative = c("less"))
+Mean_Belief <- t.test(values~ind,data=belief_rmean,alternative = c("less"), paired=TRUE)
 #Reset en Promedio de Creencias P2 y P3 sin P1-3
 Reset_bel_2<- data.frame(cbind(BO1_x[4,], BO1_x[5,]))
 belief_rmean <- stack(Reset_bel_2)
-Mean_Belief_x <- t.test(values~ind,data=belief_rmean,alternative = c("less"))
+Mean_Belief_x <- t.test(values~ind,data=belief_rmean,alternative = c("less"), paired=TRUE)
 
 #BOP1 = Reset en Creencias PRomedio sobre P1 y P2 *P
 Reset_belOthersP<- data.frame(cbind(BOP1[4,], BOP1[5,]))
 belief_OthersP <- stack(Reset_belOthersP)
-Others_BeliefP <- t.test(values~ind,data=belief_OthersP,alternative = c("less"))
+Others_BeliefP <- t.test(values~ind,data=belief_OthersP,alternative = c("less"), paired=TRUE)
 #Sin P1-3
 Reset_belOthersP<- data.frame(cbind(BOP1_x[4,], BOP1_x[5,]))
 belief_OthersP <- stack(Reset_belOthersP)
-Others_BeliefP_x <- t.test(values~ind,data=belief_OthersP,alternative = c("less"))
+Others_BeliefP_x <- t.test(values~ind,data=belief_OthersP,alternative = c("less"), paired=TRUE)
 
 #BA1 = Reset en el Promedio TOTAL (P2, P3... y P1)
 Reset_belAll<- data.frame(cbind(BA1[4,], BA1[5,]))
 belief_All <- stack(Reset_belAll)
-All_Beliefs <- t.test(values~ind,data=belief_All,alternative = c("less"))
+All_Beliefs <- t.test(values~ind,data=belief_All,alternative = c("less"), paired=TRUE)
 #Sin P1-3
 Reset_belAll<- data.frame(cbind(BA1_x[4,], BA1_x[5,]))
 belief_All <- stack(Reset_belAll)
-All_Beliefs_x <- t.test(values~ind,data=belief_All,alternative = c("less"))
+All_Beliefs_x <- t.test(values~ind,data=belief_All,alternative = c("less"), paired=TRUE)
 
 #BAP1 = Reset en el Promedio TOTAL * P
 Reset_belAllP<- data.frame(cbind(BAP1[4,], BAP1[5,]))
 belief_AllP <- stack(Reset_belAllP)
-AllP_Beliefs <- t.test(values~ind,data=belief_AllP,alternative = c("less"))
+AllP_Beliefs <- t.test(values~ind,data=belief_AllP,alternative = c("less"), paired=TRUE)
 #Sin P1-3
 Reset_belAllP<- data.frame(cbind(BAP1_x[4,], BAP1_x[5,]))
 belief_AllP <- stack(Reset_belAllP)
-AllP_Beliefs_x <- t.test(values~ind,data=belief_AllP,alternative = c("less"))
+AllP_Beliefs_x <- t.test(values~ind,data=belief_AllP,alternative = c("less"), paired=TRUE)
 
 
 #########################################
@@ -168,46 +168,46 @@ DAP1_x <- DAP1[,-3]
 Reset_DifOthers<- data.frame(cbind(DO1[4,], DO1[5,]))
 Diff_Others <- stack(Reset_DifOthers)
 DiffOthers_Reset <- t.test(values~ind,data=Diff_Others)
-DiffOthers_Reset_side <- t.test(values~ind,data=Diff_Others, alternative = c("greater"))
+DiffOthers_Reset_side <- t.test(values~ind,data=Diff_Others, alternative = c("greater"), paired=TRUE)
 #Sin P1-3
 Reset_DifOthers<- data.frame(cbind(DO1_x[4,], DO1_x[5,]))
 Diff_Others_x <- stack(Reset_DifOthers)
 DiffOthers_Reset_x <- t.test(values~ind,data=Diff_Others_x)  #,alternative = c("greater")
-DiffOthers_Reset_side_x <- t.test(values~ind,data=Diff_Others_x, alternative = c("greater"))
+DiffOthers_Reset_side_x <- t.test(values~ind,data=Diff_Others_x, alternative = c("greater"), paired=TRUE)
 
 #DOP1 = Reset en la Diferencia (P2-P3)*P - ChoiceP1
 Reset_DifOthersP<- data.frame(cbind(DOP1[4,], DOP1[5,]))
 Diff_OthersP <- stack(Reset_DifOthersP)
 DiffOthersP_Reset <- t.test(values~ind,data=Diff_OthersP)
-DiffOthersP_Reset_side <- t.test(values~ind,data=Diff_OthersP, alternative = c("greater"))
+DiffOthersP_Reset_side <- t.test(values~ind,data=Diff_OthersP, alternative = c("greater"), , paired=TRUE)
 #Sin P1-3
 Reset_DifOthersP<- data.frame(cbind(DOP1_x[4,], DOP1_x[5,]))
 Diff_OthersP <- stack(Reset_DifOthersP)
 DiffOthersP_Reset_x <- t.test(values~ind,data=Diff_OthersP)
-DiffOthersP_Reset_side_x <- t.test(values~ind,data=Diff_OthersP, alternative = c("greater"))
+DiffOthersP_Reset_side_x <- t.test(values~ind,data=Diff_OthersP, alternative = c("greater"), paired=TRUE)
 
 #DA1 = Diferencias (P1,P2,P3) - ChoiceP1
 Rst_DifAll<- data.frame(cbind(DA1[4,], DA1[5,]))
 Diff_All <- stack(Rst_DifAll)
 DiffAll_Rst <- t.test(values~ind,data=Diff_All)
-DiffAll_Rst_side <- t.test(values~ind,data=Diff_All, alternative = c("greater"))
+DiffAll_Rst_side <- t.test(values~ind,data=Diff_All, alternative = c("greater"), paired=TRUE)
 #Sin P1-3
 Rst_DifAll<- data.frame(cbind(DA1_x[4,], DA1_x[5,]))
 Diff_All <- stack(Rst_DifAll)
 DiffAll_Rst_x <- t.test(values~ind,data=Diff_All)
-DiffAll_Rst_side_x <- t.test(values~ind,data=Diff_All, alternative = c("greater"))
+DiffAll_Rst_side_x <- t.test(values~ind,data=Diff_All, alternative = c("greater"), paired=TRUE)
 
 
 #DAP1 = Duferencias (P1,P2,P3)*P - Choice P1
 Rst_DifAllP<- data.frame(cbind(DAP1[4,], DAP1[5,]))
 Diff_AllP <- stack(Rst_DifAllP)
 DiffAllP_Rst <- t.test(values~ind,data=Diff_AllP)
-DiffAllP_Rst_side <- t.test(values~ind,data=Diff_AllP, alternative = c("greater"))
+DiffAllP_Rst_side <- t.test(values~ind,data=Diff_AllP, alternative = c("greater"), paired=TRUE)
 #Sin P1-3
 Rst_DifAllP<- data.frame(cbind(DAP1_x[4,], DAP1_x[5,]))
 Diff_AllP <- stack(Rst_DifAllP)
 DiffAllP_Rst_x <- t.test(values~ind,data=Diff_AllP)
-DiffAllP_Rst_side_x <- t.test(values~ind,data=Diff_AllP, alternative = c("greater"))
+DiffAllP_Rst_side_x <- t.test(values~ind,data=Diff_AllP, alternative = c("greater"), paired=TRUE)
 
 
 
