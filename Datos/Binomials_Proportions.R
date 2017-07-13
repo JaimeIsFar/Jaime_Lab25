@@ -30,4 +30,8 @@ binom.test(36, 72, p = 1/3)  #El Jugador 1 ganó más en los 8 periodos  (SIN Empa
 binom.test(17,36,p= 1/3)     #El Jugador 1 ganó más en el segundo juego (SIN Empates)
 binom.test(5,9, p=1/3)       #Sesiones donde el Jugador 1 ganó más que 4 y 5 en el Segundo Juego (SIN Empates)
 
+########################
+# Previous games
+########################
 
+binom.test(20, 40, p = .33, 'g') 
