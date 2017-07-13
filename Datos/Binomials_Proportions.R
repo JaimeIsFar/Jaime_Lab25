@@ -34,4 +34,4 @@ binom.test(5,9, p=1/3)       #Sesiones donde el Jugador 1 ganó más que 4 y 5 en 
 # Previous games
 ########################
 
-binom.test(20, 40, p = .33, 'g') 
+binom.test(21, 36, p = .33, 'g') 
