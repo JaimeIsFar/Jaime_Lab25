@@ -1,9 +1,9 @@
 rm(list=ls())
 #setwd("C:/Users/Laboratorio25_2/Desktop/Jaime_Lab25/Datos")
-setwd("C:/Users/Jaime/Desktop/Jaime_Lab25/Datos")
+setwd("C:/Users/Alejandro/Desktop/Jaime_Lab25/Datos")
 library("grDevices", lib.loc="C:/Program Files/R/R-3.1.1/library")
 Data <- read.csv("Datac.csv")
-
+Wins <- read.csv("Datos_Wins.csv")
 #### Data Matrix ####
 
 C1 <- matrix(data=NA, nrow=8, ncol=10)      #ChosenNumber by Player1 each Period(row) and Sesion(col)
@@ -21,7 +21,13 @@ W1 <- matrix(data=NA, nrow=8, ncol=10)     #IsWinner by Player1 each Period(row)
 W2 <- matrix(data=NA, nrow=8, ncol=10)     #IsWinner by Player2 each Period(row) and Sesion(col)
 W3 <- matrix(data=NA, nrow=8, ncol=10)     #IsWinner by Player3 each Period(row) and Sesion(col)
 
+L1 <- matrix(data=NA, nrow=8, ncol=10)     #GaveLowestNumber by Player 1 each Period(row) and Sesion(col)
+L2 <- matrix(data=NA, nrow=8, ncol=10)     #GaveLowestNumber by Player 2 each Period(row) and Sesion(col)
+L3 <- matrix(data=NA, nrow=8, ncol=10)     #GaveLowestNumber by Player 3 each Period(row) and Sesion(col)
+
 TN <- matrix(data=NA, nrow=8, ncol=10)     #TargetNumber each Period(row) and Sesion(col)
+
+W0 <- matrix(data=NA, nrow=8, ncol=10) #Would Player 1 have won on the previous game by choosing the number on this same trial
 
 BO1 <- matrix(data=NA, nrow=8, ncol=10)    #MeanBeliefs of Others by Player1 each Period(row) and Sesion(col)
 BO2 <- matrix(data=NA, nrow=8, ncol=10)    #MeanBeliefs of Others by Player2 each Period(row) and Sesion(col)
@@ -106,7 +112,13 @@ if (W1[a,b] > 2){ W1[a,b] <- 1} else {W1[a,b] <- 0}
 if (W2[a,b] > 2){ W2[a,b] <- 1} else {W2[a,b] <- 0}
 if (W3[a,b] > 2){ W3[a,b] <- 1} else {W3[a,b] <- 0}
 
+L1[a,b] <- Wins$Low1[a+S[b]]
+L2[a,b] <- Wins$Low2[a+S[b]]
+L3[a,b] <- Wins$Low3[a+S[b]]
+
 TN[a,b] <- Data$Objetivo[a+S[b]]
+
+W0[a,b] <- Wins$W1_0[a+S[b]]
 
 BO1[a,b] <- mean(c(B1[a,b+c[b]],B1[a,b+d[b]]))
 BO2[a,b] <- mean(c(B2[a,b+c[b]],B2[a,b+d[b]]))
@@ -226,3 +238,64 @@ MBarA[,1] <- MDA1
 MBarA[,2] <- MDA23
 MBarAP[,1] <- MDAP1
 MBarAP[,2] <- MDAP23
+
+
+#########################################
+#########################################
+############ MATRICES SIN JUGADOR 3
+
+C1_x <- C1[,-3]
+C2_x <- C2[,-3]
+C3_x <- C3[,-3]
+
+B1_x <- B1[,-c(5,6)]
+B2_x <- B2[,-c(5,6)]
+B3_x <- B3[,-c(5,6)]
+
+W1_x <- W1[,-3]
+W2_x <- W2[,-3]
+W3_x <- W3[,-3]
+
+L1_x <- L1[,-3]
+L2_x <- L2[,-3]
+L3_x <- L3[,-3]
+
+TN_x <- TN[,-3]
+
+W0_x <- W0[,-3]
+
+BO1_x <- BO1[,-3]
+BO2_x <- BO2[,-3]
+BO3_x <- BO3[,-3]
+
+BOP1_x <- BOP1[,-3]
+BOP2_x <- BOP2[,-3]
+BOP3_x <- BOP3[,-3]
+
+BA1_x <- BA1[,-3]
+BA2_x <- BA2[,-3]
+BA3_x <- BA3[,-3]
+
+BAP1_x <- BAP1[,-3]
+BAP2_x <- BAP2[,-3]
+BAP3_x <- BAP3[,-3]
+
+DO1_x <- DO1[,-3]
+DO2_x <- DO2[,-3]
+DO3_x <- DO3[,-3]
+
+DOP1_x <- DOP1[,-3]
+DOP2_x <- DOP2[,-3]
+DOP3_x <- DOP3[,-3]
+
+DA1_x <- DA1[,-3]
+DA2_x <- DA2[,-3]
+DA3_x <- DA3[,-3]
+
+DAP1_x <- DAP1[,-3]
+DAP2_x <- DAP2[,-3]
+DAP3_x <- DAP3[,-3]
+
+SD1_x <- SD1[,-3]
+SD2_x <- SD2[,-3]
+SD3_x <- SD3[,-3]
