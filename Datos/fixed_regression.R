@@ -3,18 +3,21 @@ setwd("C:/Users/Laboratorio25_2/Desktop/Jaime_Lab25/Datos/Regresiones")
 library("lfe", lib.loc="~/R/win-library/3.4")
 library("lme4", lib.loc="~/R/win-library/3.4")
 library("plm", lib.loc="~/R/win-library/3.4")
+library("nonnest2", lib.loc="~/R/win-library/3.4")
 
 ##### Primera regresión de efectos fijos en los jugadores experimentados #####
 
 #dat <- read.csv("fixed_numero_r3.csv")
-dat <- read.csv("fixed_numero.csv")
+dat <- read.csv("fixed_numero_S1vsS2.csv")
 
 #fe_numero <- felm(dat$EA~dat$Periodo+dat$Periodo2+dat$MOT.1 | dat$Nuevo)
-fe_numero <- felm(dat$EA~dat$Periodo+dat$Periodo2+dat$MOT.1+dat$EBCS.1 | dat$Nuevo) #Incluyendo la variable de las 
+
+#segunda versión de la regresión incluyendo la conducta de los oponentes en el subjuego anterior
+fe_S1vsS2 <- felm(dat$EA~dat$Periodo+dat$EBCS.1 | dat$Nuevo) #Incluyendo la variable de las 
 #tiradas del superjuego anterior.
 
 
-summary(fe_numero)
+summary(fe_S1vsS2)
 
 #lm_numero <- lm(dat$EA~dat$Periodo+dat$Periodo2+dat$MOT.1+dat$Nuevo)
 
@@ -39,15 +42,29 @@ re_var <- lm(dat2$Var~dat2$Subjuego+dat2$Subjuego2)
 summary(re_var)
 
 
-##### Intento 2 #####
+##### Comparacion de modelos #####
 
-dat <- read.csv("fixed_numero.csv")
+comp <- read.csv("comparacion_modelos.csv")
 
-fe_nu <- plm(EA~Periodo+Periodo2+MOT.1+EBCS.1,data=dat,model="within",index="Nuevo")
+MO <- lm(EA~BO1, data=comp)
+MOp <- lm(EA~BOP1, data=comp)
+MA <- lm(EA~BA1, data=comp)
+MAp <- lm(EA~BAP1, data=comp)
+MOAp <- lm(EA~BOP1+BAP1, data=comp)
 
+MOp <- felm(EA~BOP1|Periodo,data=comp)
+MAp <- felm(EA~BAP1|Periodo,data=comp)
 
-fe_numero <- felm(dat$EA~dat$Periodo+dat$Periodo2+dat$MOT.1+dat$EBCS.1 | dat$Nuevo) #Incluyendo la variable de las 
-#tiradas del superjuego anterior.
+summary(MO)
+summary(MOp)
+summary(MA)
+summary(MAp)
+summary(MOAp)
 
+anova(MOp,MOAp,test="Chisq")
 
-summary(fe_numero)
+plot(comp$EA,comp$BOP1,type="p")
+plot(comp$EA,comp$BAP1,type="p")
+
+icci(MOp, MAp, conf.level = 0.95)
+vuongtest(MOp, MAp, nested = FALSE, adj = "none")

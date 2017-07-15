@@ -2,18 +2,19 @@
 rm(list=ls()) 
 
 # sets working directories:
-setwd("C:/Users/Alejandro/Desktop/Bayes course/ParameterEstimation/Binomial")
+setwd("C:/Users/Laboratorio25_2/Desktop/Jaime_Lab25/Bayes course/ParameterEstimation/Binomial")
 
+library("lattice", lib.loc="C:/Program Files/R/R-3.4.1/library")
 library(R2jags)
 
-k1 <- 5
-k2 <- 7
+k1 <- 2
+k2 <- 6
 n1 <- 10
 n2 <- 10
 
 data <- list("k1", "k2", "n1", "n2") # to be passed on to JAGS
 myinits <-	list(
-  list(theta1 = 0.1, theta2 = 0.9))
+  list(theta1 = 0.5, theta2 = 0.5))
 
 # parameters to be monitored:	
 parameters <- c("delta", "theta1", "theta2")
@@ -28,6 +29,8 @@ samples <- jags(data, inits=myinits, parameters,
 
 # Collect posterior samples:
 delta <- samples$BUGSoutput$sims.list$delta
+theta1 <- samples$BUGSoutput$sims.list$theta1
+theta2 <- samples$BUGSoutput$sims.list$theta2
  
 # Now let's plot a histogram for delta. 
 # First, some options to make the plot look better:
@@ -46,3 +49,4 @@ median(delta)
 density(delta)$x[which(density(delta)$y==max(density(delta)$y))]
 # 95% credible interval for delta:
 quantile(delta, c(.025,.975))
+mean(theta1)

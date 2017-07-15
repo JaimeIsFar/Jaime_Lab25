@@ -1,3 +1,18 @@
+##### T-test para probar que los jugadores sin experiencia empiezan igual ambos superjuegos.
+
+C23 <- matrix(data=c(C2,C3), nrow=8, ncol=20)
+
+S1vsS2 <- data.frame(cbind(C23[1,],C23[5,]))
+S1vsS2 <- stack(S1vsS2)
+t_dif <- t.test(values~ind,data=S1vsS2) #no hay diferencia en el primer periodo de los no experimentados en los super
+
+s1 <- c(C23[1:4,])
+s2 <- c(C23[5:8,])
+S1vsS2 <- data.frame(cbind(s1,s2))
+S1vsS2 <- stack(S1vsS2)
+t_dif <- t.test(values~ind,data=S1vsS2) # si hay diferencia en los cuatro periodos de cada super promedidados
+
+
 ##### T-test Choice against Belief, with all sessions #####
 
 T_diferencias <- matrix(data=NA, nrow=8, ncol=8) #t-test of diffs in choices & beliefs in all periods in 4 conditions
