@@ -22,8 +22,9 @@
 rm(list=ls()) 
 
 # sets working directories:
-setwd("C:/Users/EJ/Dropbox/EJ/temp/BayesBook/test/GettingStarted")
+setwd("C:/Users/Laboratorio25_2/Desktop/Jaime_Lab25/Bayes course/GettingStarted")
 
+library("lattice", lib.loc="C:/Program Files/R/R-3.4.1/library")
 library(R2jags)
 
 k <- 5
