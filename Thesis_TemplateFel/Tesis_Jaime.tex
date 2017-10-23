@@ -1,0 +1,341 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thesis Template Lab25 UNAM
+% 
+% (Thesis Template for the students of Lab25 at the UNAM)
+% This Template was "fixed/built up" by Adriana Felisa Chávez (adrifelcha@gmail.com)
+% as a mixture of two Previous Templates:
+
+% 1) "unamthesis" originally developed by: Julio Augusto Freyre-González
+% We took this template as a basis for desginging the front page
+% (according to the requirements established by the UNAM)
+%
+
+% 2) 'Masters/Doctoral Thesis'  (Which is the basis for EVERYTHING else in this template)
+% LaTeX Template
+% Version 2.4 (22/11/16)
+% Version 2.x major modifications by:
+% Vel (vel@latextemplates.com)
+% This template was based on a template by:
+% Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
+% Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
+% Which means...
+% The second major version of the Masters/Doctoral Thesis template was made by Vel. 
+% The thesis style was originally created by Steve R. Gunn and modified into a template by Sunil Patel.   
+% Template license:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% The rest of the Template (except the front page) was built according to this last Template
+
+
+%Both of previously mentioned templates -used to build up the template you're using right now-
+%can be downloaded from:
+% http://www.LaTeXTemplates.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+12pt, % The font size (other options: 10pt, 11pt, 12pt)
+%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
+spanish, % language by default
+singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
+%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+%liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
+%toctotoc, % Uncomment to add the main table of contents to the table of contents
+%parskip, % Uncomment to add space between paragraphs
+%nohyperref, % Uncomment to not load the hyperref package
+headsepline, % Uncomment to get a line under the header
+%chapterinoneline, % Uncomment to place the chapter title next to the number on one line
+%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+]{Tesis_Lab25} % The class file specifying the document structure
+
+\usepackage[utf8]{inputenc} % Required for international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{graphics}
+\usepackage{utopia} % Dr. Bouzas is confortable with this font; but you may preffer using Palatino
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage{arial}
+\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+%\usepackage[natbibapa]{apacite}
+%\bibliographystyle{apacite}
+
+\addbibresource{Bib_Lab25.bib} % The filename of the bibliography
+
+%\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=2.5cm, % Inner margin
+	outer=3.8cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=1.5cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	THESIS INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thesistitle{Niveles Cognitivos y Creencias en Juegos} % Your thesis title, print it with \ttitle
+\supervisor{Dr. Arturo Bouzas Riaño} % Your supervisor's name, print it with \supname
+\examiner{Dr. Óscar Zamora Arévalo} % Your examiner's name, print it with \examname
+\degree{Licenciatura en Psicología} % Your degree name, print it with \degreename
+\author{Jaime Osvaldo Islas Farías}% Your name, print it with \authorname
+
+\subject{Psicología} % Your subject area, print it with \subjectname
+\keywords{} % Keywords for your thesis, print it with \keywordnames
+\university{\href{http://www.university.com}{Universidad Nacional Autónoma de México}} % Your university's name and URL, print it with \univname
+\department{\href{http://department.university.com}{Laboratorio de Comportamiento Adaptable}} % Your department's name and URL, print it with \deptname
+\group{\href{http://researchgroup.university.com}{Laboratorio de Comportamiento Adaptable}} % Your research group's name and URL, print it with \groupname
+\faculty{\href{http://faculty.university.com}{Facultad de Psicología}} % Your faculty's name and URL, print it with \facname
+
+\sinodalA{Sinodal 1} % The name of your 1st Sinodal; print it with \SinodalA
+\sinodalB{Sinodal 2} % The name of your 2nd Sinodal; print it with \SinodalB
+\sinodalC{Sinodal 3} % The name of your 3rd Sinodal; print it with \SinodalC
+
+\city{Ciudad de México} % Your city; print it with \city
+
+\proyectopapime{PAPIME PE310016}   % The 1st project from where you received financial support, print it with \PAPIIT
+\proyectopapiit{PAPIIT IN307214}   % The 2nd project from where you received financial support, print it with \PAPIME
+
+\AtBeginDocument{
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+}
+
+%----------------------------------------------------------------------------------------
+%	LET THE THESIS BEGIN!
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\frontmatter % With this, you use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	FRONT PAGE (According to the UNAM requirements)
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+\begin{minipage}[c][9in][s]{1in}
+\centering
+\hspace*{-0.2in} \includegraphics[width=1.1in]{Escudo-UNAM}\\[10pt]
+\hskip 2pt\vrule width 2pt height 6.7in
+\hskip 1mm\vrule width 1pt height 6.7in\\[10pt]
+\hspace*{-0.2in} \includegraphics[width=1.2in]{PSI}
+\end{minipage}\hskip 10pt
+% Right layout - Titles
+\begin{minipage}[c][\textheight][s]{5.125in}
+\centering
+% University, institute, department and title
+{\Large\scshape\univname}
+\vspace{3mm}\hrule height2pt
+\vspace{1mm}\hrule height1pt
+\vspace{3mm}
+{\scshape\facname}\par
+% Title
+\vfill\vfill
+{\def\baselinestretch{1}\LARGE\scshape\ttitle\par}
+\vfill\vfill
+% Degree, author, supervisor and date
+\makebox[8cm][s]{\Huge T E S I S}\\[8pt]
+QUE PARA OBTENER EL GRADO DE:\\[8pt]
+{\scshape\degreename}\\[16pt]
+{\huge P  R  E  S  E  N  T  A:}\\[8pt]
+{\large {\scshape\authorname}}\par
+\vfill
+{\small DIRECTOR DE TESIS:\\{\scshape\supname}}\par
+\vfill
+{\small REVISOR:\\{\scshape\examname}}\par
+\vfill
+{\small SINODALES:\\{\scshape\SinodalA}}\\{\scshape\SinodalB}}\\{\scshape\SinodalC}}\par
+\vfill
+{\small Con el apoyo de:\\Proyecto {\scshape\PAPIIT}}\par   
+%If you only received financial support from a single project, you may delete "y \\Proyecto {\scshape\PAPIME}"
+\vfill
+{\hspace{0.2in}\scshape\city\hfill\today}
+\end{minipage}
+\end{titlepage}
+\begin{titlepage}
+\centering\large
+{\def\baselinestretch{1.2}\Large\bfseries\ttitle\par}\\
+\vspace{15mm}
+por\par
+\vspace{15mm}
+{\Large\authorname}
+\vspace{40mm}
+\par
+Tesis presentada para obtener la\par
+\vspace{15mm}
+\degreename\par
+\vspace{15mm}
+en la\par 
+\vspace{15mm}
+\facname
+\par
+\vspace{15mm}
+{\Large\scshape\univname}
+\vspace{30mm}
+\par
+\city, \today
+\end{titlepage}}
+
+
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{declaration}
+\addchaptertocentry{\authorshipname} % Add the declaration to the table of contents
+\noindent Yo, \authorname, declaro que la tesis aquí presentada bajo el título \enquote{\ttitle}, es de mi entera autoría. Aclarando que:\\
+
+\begin{itemize} 
+\item La presente tesis fue trabajada en el Laboratorio 25 de la Facultad de Psicología de la Universidad Nacional Autónoma de México, bajo la tutela del Dr. Arturo Bouzas Riaño. 
+\item Ningún dato aquí presentado ha sido utilizado con anterioridad para recibir un grado académico ni en ésta ni en ninguna otra Universidad. 
+\item Las ideas cuya autoría no me corresponde retomadas en el texto, están clara y adecuadamente señaladas. Toda cita se señala y vincula a la fuente de donde se obtuvo. Con excepción de dichos fragmentos citados, todo lo aquí escrito es enteramente mi responsabilidad, producto de mi trabajo. 
+\item Todas las figuras aquí presentadas fueron elaboradas en RStudio (lenguaje R) y Spyder (lenguaje Python) por la autora de la presente tesis, a menos que se señale lo contrario.
+\item He señalado y dado crédito a todas las posibles fuentes de apoyo consultadas (lenguajes de programación, códigos base y manuales varios).
+%\item Cualquier porción del trabajo aquí expuesto que se haya realizado en colaboración directa o indirecta con un tercero, es señalada y presentada con claridad.
+\item El presente proyecto de investigación fue realizado con el apoyo de PAPIIT IN307214 y PAPIME PE310016.\\
+\end{itemize}
+ 
+\noindent Firma:\\
+\rule[0.5em]{25em}{0.5pt} % This prints a line for the signature
+ 
+\noindent Fecha:\\
+\rule[0.5em]{25em}{0.5pt} % This prints a line to write the date
+\end{declaration}
+
+\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+
+\vspace*{0.2\textheight}
+
+\noindent\enquote{\itshape Aquí pueden poner una cita super padriurix.}\bigbreak
+
+%My experiences with science led me to God. They challenge science to prove the existence of God. But must we really light a candle to see the sun?
+%1972
+
+%Read more at: https://www.brainyquote.com/quotes/authors/s/steven_pinker_2.html
+\hfill Autor de la cita, año.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+
+En esta página va a ir el resumen de tu trabajo. En esta página va a ir el resumen de tu trabajo. En esta página va a ir el resumen de tu trabajo. En esta página va a ir el resumen de tu trabajo. En esta página va a ir el resumen de tu trabajo. En esta página va a ir el resumen de tu trabajo. En esta página va a ir el resumen de tu trabajo . En esta página va a ir el resumen de tu trabajo . En esta página va a ir el resumen de tu trabajo .En esta página va a ir el resumen de tu trabajo .En esta página va a ir el resumen de tu trabajo. En esta página va a ir el resumen de tu trabajo . En esta página va a ir el resumen de tu trabajo . En esta página va a ir el resumen de tu trabajo . En esta página va a ir el resumen de tu trabajo . En esta página va a ir el resumen de tu trabajo . En esta página va a ir el resumen de tu trabajo . En esta página va a ir el resumen de tu trabajo . En esta página va a ir el resumen de tu trabajo\\
+
+\end{abstract}
+
+%\ldots
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+\begin{acknowledgements}
+\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
+
+Aquí van los nombres de las personas que sean dueñas de sus bellos corazones.\\
+
+Aquí van los nombres de las personas que sean dueñas de sus bellos corazones.\\
+
+Aquí van los nombres de las personas que sean dueñas de sus bellos corazones.\\
+
+Aquí van los nombres de las personas que sean dueñas de sus bellos corazones.\\
+
+Aquí van los nombres de las personas que sean dueñas de sus bellos corazones.\\
+
+Aquí van los nombres de las personas que sean dueñas de sus bellos corazones.\\
+
+Aquí van los nombres de las personas que sean dueñas de sus bellos corazones.\\
+
+Aquí van los nombres de las personas que sean dueñas de sus bellos corazones.\\
+
+Aquí van los nombres de las personas que sean dueñas de sus bellos corazones.\\
+
+Aquí van los nombres de las personas que sean dueñas de sus bellos corazones.\\
+
+\end{acknowledgements}
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Prints the main table of contents
+
+\listoffigures % Prints the list of figures
+
+\listoftables % Prints the list of tables
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+
+\textbf{BTW} & \textbf{B}y-\textbf{T}he \textbf{W}ay\\
+\textbf{LOL} & \textbf{L}aughing \textbf{O}ut \textbf{L}oud\\
+\textbf{ROFL} & \textbf{R}olling \textbf{O}n \textbf{F}loor \textbf{L}aughing\\
+
+\end{abbreviations}
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+
+\dedicatory{En memoria de la buena Felisa\ldots} 
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{thesis} % Return the page headers back to the "thesis" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+
+\include{Chapters/Cap_Intro}
+\include{Chapters/Cap_Marco} 
+\include{Chapters/Cap_Metodo} 
+\include{Chapters/Cap_Resultados} 
+\include{Chapters/Cap_Disc}
+\include{Chapters/Cap_Conclusion}
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+
+\include{Appendices/App_Ejemplo}
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\printbibliography[heading=bibintoc]
+
+\end{document}  
