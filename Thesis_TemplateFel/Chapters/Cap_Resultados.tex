@@ -1,13 +1,13 @@
-% Chapter 1
+% Chapter 1{}
 
 \chapter{Resultados} % Main chapter title
 \label{Cap_Res} % For referencing the chapter elsewhere, use \ref{Cap_Res} 
 
 \section{Análisis Bayesiano}
 
-Para el análisis de los resultados obtenidos, se utilizaron tanto pruebas estadísticas bayesianas como pruebas clásicas o frecuentistas. En el presente apartado se presentan únicamente los resultados de los análisis bayesianos, mientras que los resultados de los análisis clásicos se incluyen como apéndice; en general, ambas aproximaciones apuntan hacia las mismas conclusiones.\\
+Para el análisis de los resultados obtenidos, se utilizaron tanto pruebas estadísticas bayesianas como pruebas clásicas o frecuentistas. En el presente apartado se presentan únicamente los resultados de los análisis bayesianos, mientras que los resultados de los análisis clásicos se incluyen en el apéndice~\ref{App_Frecuentista}; en general, ambas aproximaciones apuntan hacia las mismas conclusiones.\\
 
-Se decidió presentar los resultados del análisis bayesiano porque se considera que el factor de Bayes, que funciona como una alternativa al p-value como medida de significancia estadística, refleja de forma mucho más clara la  relación entre los datos obtenidos y las hipótesis nula y alternativa, al señalar cuántas veces es más probable que la evidencia haya sido producida bajo la hipótesis alterna respecto a la hipótesis nula ($BF_{10}$), o viceversa ($BF_{01}$).
+Se decidió presentar los resultados del análisis bayesiano porque se considera que el factor de Bayes, que funciona como una alternativa al p-value como medida de significancia estadística, refleja de forma mucho más clara la  relación entre los datos obtenidos y las hipótesis nula y alternativa, al señalar cuántas veces es más probable que la evidencia haya sido producida bajo la hipótesis alterna respecto a la hipótesis nula ($BF_{10}$), o viceversa ($BF_{01}$).\\
 
 \section{Consistencia entre creencias y elecciones en el primer subjuego}
 
@@ -29,10 +29,10 @@ Una vez computadas las diferencias por cada sujeto y periodo, se calculó el pro
 \caption[Diferencias Normalizadas en el Subjuego 1]{Prueba-T bayesiana de una sola muestra que compara contra 0 las diferencias promedio entre las creencias y las elecciones de los jugadores en cada periodo del primer subjuego.}
 \label{DN_Sub1}
 \centering
-\begin{tabular}{l l | c c c}  %'|' señala Líneas verticales
+\begin{tabular}{l | c c c}  %'|' señala Líneas verticales
 \toprule
 %\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
-\textbf{} & \textbf{$BF_{10}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\textbf{} & \textbf{BF$_{10}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
 \midrule
 Periodo 1 & 19.300 & 1.823$e^{-6}$ & -0.366 \\
 Periodo 2 & 34.545 & 3.137$e^{-4}$ & -0.342 \\
@@ -42,7 +42,7 @@ Periodo 4 & 0.652 & 0.015 & -0.147 \\
 \end{tabular}
 \end{table}
 
-En la Figura~\ref{fig:DiferenciasNormalizadas_Subjuego1} se presentan las distribuciones prior y posterior computadas en cada periodo. Las distribuciones prior señalan la hipótesis nula (las diferencias estarán cercanas a $0$) y la distribución posterior presenta el estimado realizado a la luz de los datos. La forma más sencilla de interpretar estas gráficas es como una razón de probabilidades: si la densidad de probabilidad es mayor en la distribución prior que en la distribución posterior para el punto que señala un tamaño del efecto $0$ ($\delta = 0$), quiere decir que la evidencia favorece la hipótesis alterna, ya que que a la luz de la evidencia es \textit{muy poco probable} (menos de lo que se esperaba de acuerdo a la distribución prior) que el tamaño de efecto tenga un valor cercano a $0$.
+En la Figura~\ref{fig:DiferenciasNormalizadas_Subjuego1} se presentan las distribuciones prior y posterior computadas en cada periodo. Las distribuciones prior señalan la hipótesis nula (las diferencias estarán cercanas a $0$) y la distribución posterior presenta el estimado realizado a la luz de los datos. La forma más sencilla de interpretar estas gráficas es como una razón de probabilidades: si la densidad de probabilidad es mayor en la distribución prior que en la distribución posterior para el punto que señala un tamaño del efecto $0$ ($\delta = 0$), quiere decir que la evidencia favorece la hipótesis alterna, ya que que a la luz de la evidencia es \textit{muy poco probable} (menos de lo que se esperaba de acuerdo a la distribución prior) que el tamaño de efecto tenga un valor cercano a $0$.\\
 
 \begin{figure}[th]
 \centering
@@ -56,18 +56,20 @@ Estos resultados son consistentes con lo que reporta Lahav \parencite*{Lahav2015
 
 En el estudio presentado por Lahav \parencite*{Lahav2015}, el cómputo de la diferencia entre las creencias y las elecciones se repitió omitiendo la multiplicación por $p$, en un intento por evaluar si las inconsistencias halladas entre las creencias y las elecciones se debían a que los participantes no hubieran realizado dicha operación. El presente trabajo también incorporó dicha variación del análisis, que se llevó a cabo de acuerdo a la siguiente ecuación:\\
 
+\begin{center}
 $DN_i^t = \frac{(B_i^t - C_i^t)}{C_t}$\\
+\end{center}
 
-Nuevamente, las diferencias promedio computadas en cada periodo asumiendo que los participantes no multiplicaron sus creencias por $p$, fueron evaluadas con pruebas-T bayesianas de una sola muestra.  Este análisis arrojó resultados inversos a los encontrados cuando la multiplicación por $p$ fue tomada en cuenta: los primeros periodos no muestran diferencias significativas y los últimos, sí.  Aunado a ello, las diferencias en los periodos 3 y 4 se vuelven positivas (indicando que las creencias cayeron por encima de las elecciones). Estos resultados se presentan en la Tabla~\ref{DN_Sub1_noP}.
+Nuevamente, las diferencias promedio computadas en cada periodo asumiendo que los participantes no multiplicaron sus creencias por $p$, fueron evaluadas con pruebas-T bayesianas de una sola muestra.  Este análisis arrojó resultados inversos a los encontrados cuando la multiplicación por $p$ fue tomada en cuenta: los primeros periodos no muestran diferencias significativas y los últimos, sí.  Aunado a ello, las diferencias en los periodos 3 y 4 se vuelven positivas (indicando que las creencias cayeron por encima de las elecciones). Estos resultados se presentan en la Tabla~\ref{DN_Sub1_noP}.\\
 
 \begin{table}
 \caption[Diferencias Normalizadas en el Subjuego 1 (sin multiplicación por $p$)]{Prueba-T bayesiana de una sola muestra que compara contra 0 las diferencias promedio entre las creencias y las elecciones de los jugadores en cada periodo del primer subjuego.}
 \label{DN_Sub1_noP}
 \centering
-\begin{tabular}{l l | c c c}  %'|' señala Líneas verticales
+\begin{tabular}{l | c c c}  %'|' señala Líneas verticales
 \toprule
 %\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
-\textbf{} & \textbf{$BF_{10}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\textbf{} & \textbf{BF$_{10}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
 \midrule
 Periodo 1 & 0.207 & 0.010 & -0.049 \\
 Periodo 2 & 0.196 & 0.013 & -0.012 \\
@@ -77,7 +79,7 @@ Periodo 4 & 1.861 & 4.032$e^{-6}$ & 0.280 \\
 \end{tabular}
 \end{table}
 
-De acuerdo con el factor de Bayes, aunque la hipótesis alterna es más probable en los periodos 3 y 4 (es decir, parece ser que sí hay diferencias entre las creencias y las elecciones), la evidencia a favor de esta conclusión es relativamente pequeña, (particularmente en el periodo 4, donde podría considerarse anecdótica). En la Figura~\ref{fig:DiferenciasNormalizadas_Subjuego1_NoP} se incluyen las distribuciones prior y posteriores de cada periodo.
+De acuerdo con el factor de Bayes, aunque la hipótesis alterna es más probable en los periodos 3 y 4 (es decir, parece ser que sí hay diferencias entre las creencias y las elecciones), la evidencia a favor de esta conclusión es relativamente pequeña, (particularmente en el periodo 4, donde podría considerarse anecdótica). En la Figura~\ref{fig:DiferenciasNormalizadas_Subjuego1_NoP} se incluyen las distribuciones prior y posteriores de cada periodo.\\
 
 \begin{figure}[th]
 \centering
@@ -103,19 +105,20 @@ Siendo que la diferencia más importante entre lo hallado en el presente estudio
 
 Además de replicar el método de diferencias normalizadas utilizado por Lahav \parencite*{Lahav2015}, las diferencias entre creencias y elecciones fueron evaluadas con un segundo método que no dependía de la elección promedio de todos los participantes en cada periodo para ponderarlas. La medida utilizada fue la diferencia relativa entre creencias y elecciones de cada participante $i$ en cada periodo $t$, calculada de la siguiente manera:\\
 
+\begin{center}
 $DR_i^t= \frac{(\frac{2}{3}B_i^t - C_i^t)}{0.5(\frac{2}{3}B_i^t + C_i^t)}$\\
+\end{center}
 
-
-Las diferencias relativas computadas en promedio por cada periodo fueron evaluadas en términos de qué tanto se alejaron de $0$, mediante la realización de pruebas-T bayesianas de una sola muestra, que se presentan en la Tabla~\ref{DR_Sub1}. Se encontró que en tres de los cuatro periodos hubo diferencias significativas entre creencias y elecciones. En la Figura~\ref{fig:DiferenciasRelativas_Subjuego1} se incluyen las distribuciones prior y posterior de cada periodo.
+Las diferencias relativas computadas en promedio por cada periodo fueron evaluadas en términos de qué tanto se alejaron de $0$, mediante la realización de pruebas-T bayesianas de una sola muestra, que se presentan en la Tabla~\ref{DR_Sub1}. Se encontró que en tres de los cuatro periodos hubo diferencias significativas entre creencias y elecciones. En la Figura~\ref{fig:DiferenciasRelativas_Subjuego1} se incluyen las distribuciones prior y posterior de cada periodo.\\
 
 \begin{table}
 \caption[Diferencias Relativas en el Subjuego 1]{bayesiana de una sola muestra que compara contra 0 las diferencias promedio entre las creencias y las elecciones de los jugadores en cada periodo del primer subjuego.}
 \label{DR_Sub1}
 \centering
-\begin{tabular}{l l | c c c}  %'|' señala Líneas verticales
+\begin{tabular}{l | c c c}  %'|' señala Líneas verticales
 \toprule
 %\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
-\textbf{} & \textbf{$BF_{10}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\textbf{} & \textbf{BF$_{10}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
 \midrule
 Periodo 1 & 77.283 & 7.775$e^{-5}$ & -0.457 \\
 Periodo 2 & 12.797 & 2.047$e^{-6}$ & -0.328 \\
@@ -137,19 +140,21 @@ Tal y como se encontró con el método de Diferencias Normalizadas, todas las di
 
 Posteriormente, se computaron las Diferencias Relativas omitiendo la multiplicación por $p$, de la siguiente forma:\\
 
+\begin{center}
 $DR_i^t = \frac{(B_i^t - C_i^t)}{0.5(B_i^t + C_i^t)}$\\
+\end{center}
 
-Se realizaron pruebas-T de una sola muestra para determinar si las Diferencias Relativas promedio en cada periodo son significativamente diferentes de 0. En la Tabla~\ref{DR_Sub1_NoP} se presentan los resultados obtenidos por la prueba-T bayesiana. A su vez, la Figura~\ref{fig:DiferenciasRelativas_Subjuego1_NoP} presenta la relación entre las distribuciones prior y las posteriores de cada periodo.
+Se realizaron pruebas-T de una sola muestra para determinar si las Diferencias Relativas promedio en cada periodo son significativamente diferentes de 0. En la Tabla~\ref{DR_Sub1_NoP} se presentan los resultados obtenidos por la prueba-T bayesiana. A su vez, la Figura~\ref{fig:DiferenciasRelativas_Subjuego1_NoP} presenta la relación entre las distribuciones prior y las posteriores de cada periodo.\\
 
 
 \begin{table}
 \caption[Diferencias Relativas en el Subjuego 1 (sin multiplicar por $p$)]{Prueba-T bayesiana de una sola muestra que compara contra 0 las diferencias promedio entre las creencias y las elecciones de los jugadores en cada periodo del primer subjuego.}
 \label{DR_Sub1_NoP}
 \centering
-\begin{tabular}{l l | c c c}  %'|' señala Líneas verticales
+\begin{tabular}{l | c c c}  %'|' señala Líneas verticales
 \toprule
 %\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
-\textbf{} & \textbf{$BF_{10}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\textbf{} & \textbf{BF$_{10}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
 \midrule
 Periodo 1 & 0.269 0& 5.246$e^{-4}$ & -0.101 \\
 Periodo 2 & 0.211 & 0.009 & -0.044 \\
@@ -187,21 +192,301 @@ En la Figura~\ref{fig:Cambios_NumElegido} se muestran los cambios en las eleccio
 \label{fig:Cambios_NumElegido}
 \end{figure}
 
-De acuerdo con una prueba binomial bayesiana de una cola, los datos presentan evidencia anecdótica en favor de la hipótesis alterna que establece que los participantes eligen números más pequeños entre cada periodo del subjuego 1 y números más grandes al iniciar el subjuego 2 (ver Tabla 5). La falta de robustez en la evidencia puede deberse a que solamente se realizaron 10 sesiones experimentales.
+De acuerdo con una prueba binomial bayesiana de una cola, los datos presentan evidencia anecdótica en favor de la hipótesis alterna que establece que los participantes eligen números más pequeños entre cada periodo del subjuego 1 y números más grandes al iniciar el subjuego 2 (ver Tabla~\ref{Cambios_Elecciones}). La falta de robustez en la evidencia puede deberse a que solamente se realizaron 10 sesiones experimentales.\\
 
 \begin{table}
-\caption[Prueba Binomial para comprobar la proporción de casos en que ]{Prueba binomial bayesiana de los casos en los que los jugadores eligen un número más grande que en el periodo anterior (El periodo 5 representa el primer periodo del Subjuego 2).}
-\label{DR_Sub1_NoP}
+\caption[Cambios en el número elegido periodo a periodo]{Prueba binomial bayesiana de los casos en los que los jugadores eligen un número más grande que en el periodo anterior (El periodo 5 representa el primer periodo del Subjuego 2).}
+\label{Cambios_Elecciones}
 \centering
-\begin{tabular}{l l | c c c}  %'|' señala Líneas verticales
+\begin{tabular}{l l | c c c c}  %'|' señala Líneas verticales
 \toprule
 %\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
-\textbf{} & \textbf{$BF_{10}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\textbf{} & \textbf{Cambio} & \textbf{Casos} & \textnf{Total} & \textbf{Proporción} & \textbf{$BF_{10}$}\\
 \midrule
-Periodo 1 & 0.269 0& 5.246$e^{-4}$ & -0.101 \\
-Periodo 2 & 0.211 & 0.009 & -0.044 \\
-Periodo 3 & 8.393 & 2.307$e^{-6}$ & -0.315 \\
-Periodo 4 & 0.810 & 5.669$e^{-6}$ & -0.167 \\
+Periodos 1 vs 2 & Aumento & 3 & 10 & 0.3 & 0.176 \\
+... & Reducción & 7 & 10 & 0.7 & 1.376 \\
+Periodos 2 vs 3 & Aumento & 4 & 10 & 0.4 & 0.243 \\
+... & Reducción & 6 & 10 & 0.6 & 0.643 \\
+Periodos 3 vs 4 & Aumento & 2 & 10 & 0.2 & 0.135 \\
+... & Reducción & 8 & 10 & 0.8 & 4.002 \\
+Periodos 4 vs 5 & Aumento & 7 & 10 & 0.7 & 1.376 \\
+... & Reducción & 3 & 10 & 0.3 & 0.176 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+Para determinar si, en promedio, el número elegido por el participante A en el último periodo del subjuego 1 es menor que su número elegido en el primer periodo del subjuego 2, se realizó una prueba-T de una cola, donde se encontró que si bien el promedio de los números elegidos en el primer periodo del subjuego 2 es mayor que en el subjuego 1, la diferencia parece ser pequeña y no significativa.\\
+
+No obstante, al revisar los datos de cada sesión experimental se encontraron anomalías en la ejecución del participante A de la sesión 3, cuyo comportamiento difiere considerablemente de lo que se reporta en la literatura y de lo observado en el resto de las sesiones.\\
+
+En la Figura~\ref{fig:NumElegido} se presentan las elecciones de todos los participantes en cada periodo de los dos subjuegos, por cada sesión experimental. Se puede apreciar que el participante A de la sesión 3 no presenta la tendencia a elegir números más pequeños periodo a periodo y por el contrario, elige números muy grandes en el último periodo de cada subjuego, una estrategia que no aporta ningún tipo de ventaja en el juego. Este patrón de respuesta sugiere que el participante A de la sesión 3 pudo no haber entendido la dinámica del juego.\\
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.40\textwidth]{Figures/Cambios_S12}\\
+ \includegraphics[width=0.40\textwidth]{Figures/Cambios_S34}\\
+ \includegraphics[width=0.40\textwidth]{Figures/Cambios_S56}\\
+ \includegraphics[width=0.40\textwidth]{Figures/Cambios_S78}\\
+ \includegraphics[width=0.40\textwidth]{Figures/Cambios_S910}\\
+%\decoRule
+\caption[Números elegidos en cada periodo por cada jugador.]{Números elegidos por cada uno de los cinco participantes incluidos en cada sesión experimental, a lo largo de los cuatro periodos que conformaron cada  subjuego. El participante A, que jugó tanto en el Subjuego 1 como en el Subjuego 2 contra participantes sin experiencia, se señala en rojo.}
+\label{fig:NumElegido}
+\end{figure}
+
+Para evaluar qué tan saliente es la tirada del jugador A de la sesión 3 en el primer periodo del segundo subjuego, en la Figura~\ref{fig:Participante_Atipico} se presenta un diagrama de caja y bigotes donde se muestra que la elección realizada se encuentra por arriba del rango intercuadrático multiplicado por $1.5$, lo que permite clasificarla como un valor atípico.\\
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.70\textwidth]{Figures/Fig_7} 
+%\decoRule
+\caption[Contraste de caso atípico en el número elegido en el periodo 4 de la Sesión experimental 3]{Contraste entre el número promedio elegído por los Participantes A en el Periodo 4 y el número elegido por el participante de la Sesión Experimental 3.}
+\label{fig:Participante_Atipico}
+\end{figure}
+
+Tomando en cuenta dicho resultado, se repitieron las pruebas-T de una cola para determinar si el número elegido por el participante A en el último periodo del subjuego 1 es menor que el número elegido en el primer periodo del subjuego 2, omitiendo las tiradas del participante A de la sesión 3. Al realizar dicho análisis, el número elegido en promedio por los participantes A en el último periodo del subjuego 1 fue significativamente menor que la elección promedio registrada en el primer periodo del subjuego 2, encontrando evidencia del efecto de reset (prueba clásica $t = -2.317$, $p = .025 < 0.5$, prueba bayesiana $BF_{10} = 3.57$, $error = 1.377e^{-4}$).\\
+
+En la Figura~\ref{fig:Promedio_ConSin3} se presentan las elecciones promedio de los participantes A y de los participantes no-A (participantes B al E) en cada periodo jugado. La figura presenta en gráficos diferentes las elecciones promedio computadas cuando se consideran los datos de la sesión 3 (panel izquierdo) y cuando no (panel derecho).\\
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.70\textwidth]{Figures/Fig_8} 
+%\decoRule
+\caption[Cambio en el número elegido periodo a periodo.]{Contraste entre el número promedio elegído por los Participantes A en el Periodo 4 y el número elegido por el participante de la Sesión Experimental 3.}
+\label{fig:Promedio_ConSin3}
+\end{figure}
+
+Con base en estos resultados, se puede afirmar que se logró replicar el efecto de reset reportado por Slonim \parencite*{Slonim2005}. Con ello, se comprueba la validez en la comparación de la consistencia entre las creencias y elecciones de los participantes A en cada periodo, a lo largo de los dos subjuegos.\\
+
+\section{Consistencia entre Creencias y Elecciones, entre subjuegos}
+
+Las creencias y elecciones de los participantes en el subjuego 2 fueron sometidos a los mismos análisis reportados para el subjuego 1 en la sección 3.1: se computaron las diferencias normalizadas y las diferencias relativas, incluyendo y excluyendo la multiplicación por $p$. Sin embargo, al analizar las respuestas registradas en el subjuego 2 se hizo una distinción entre la ejecución de los jugadores con experiencia (participantes A) y los jugadores que participaban en el juego por primera vez (participantes D y E).\\
+
+Se calculó la diferencia normalizada entre las creencias y elecciones en cada periodo del subjuego 2, para el participante A y los participantes D y E. Posteriormente,  se realizaron pruebas-T bayesianas para determinar si estas diferencias fueron estadísticamente diferentes de 0.\\
+
+En las Tabla~\ref{DN_Sub2_A} y ~\ref{DN_Sub2_DE} se presentan los resultados obtenidos en las pruebas-T bayesianas de una sola muestra que evalúan el promedio de las diferencias normalizadas entre creencias y elecciones contra 0. De acuerdo con la Tabla~\ref{DN_Sub2_A}, los participantes A no mostraron diferencias significativas (el factor de Bayes en este caso indica qué tantas veces es más probable la hipótesis nula de que no haya diferencias), lo que indica que hubo una mayor consistencia entre sus creencias y elecciones en todos los periodos del subjuego 2. En contraste, en la Tabla~\ref{DN_Sub2_DE} se puede observar que los participantes D y E mostraron diferencias significativas en los primeros tres periodos del subjuego, y sólo parecieron  adquirir consistencia entre sus creencias y elecciones en el último periodo. Este último resultado es muy similar a lo reportado en todos los participantes en el subjuego 1, donde todos los jugadores compartían el mismo nivel de experiencia. Además, en todos los casos, las creencias estuvieron por debajo de las elecciones reales. En las Figuras~\ref{fig:DiferenciasNormalizadas_Subjuego2_A} y ~\ref{fig:DiferenciasNormalizadas_Subjuego2_DE} se incluyen las distribuciones prior y posterior de las diferencias normalizadas por periodo para los participantes A y los participantes D y E, respectivamente.\\
+
+\begin{table}
+\caption[Diferencias Normalizadas en el Subjuego 2 (Participantes A)]{Prueba-T bayesiana de una sola muestra que compara contra 0 las diferencias promedio entre las creencias y las elecciones del participante A en cada periodo del segundo subjuego.}
+\label{DN_Sub2_A}
+\centering
+\begin{tabular}{l | c c c}  %'|' señala Líneas verticales
+\toprule
+%\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
+\textbf{} & \textbf{BF$_{01}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\midrule
+Periodo 5 & 3.010 0& 0.006 & -0.049 \\
+Periodo 6 & 3.212 & 0.007 & -0.011 \\
+Periodo 7 & 2.012 & 0.003 & -0.133 \\
+Periodo 8 & 3.205 & 0.007 & -0.028 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption[Diferencias Normalizadas en el Subjuego 2 (Participantes D y E)]{Prueba-T bayesiana de una sola muestra que compara contra 0 las diferencias promedio entre las creencias y las elecciones de los participantes D y E en cada periodo del segundo subjuego.}
+\label{DN_Sub2_DE}
+\centering
+\begin{tabular}{l | c c c}  %'|' señala Líneas verticales
+\toprule
+%\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
+\textbf{} & \textbf{BF$_{01}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\midrule
+Periodo 5 & 0.315 0& 0.003 & -0.349 \\
+Periodo 6 & 0.102 & 6.001$e^{-4}$ & -0.243 \\
+Periodo 7 & 0.063 & 3.519$e^{-4}$ & -0.307 \\
+Periodo 8 & 4.002 & 0.022 & -0.047 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.70\textwidth]{Figures/Fig_9} 
+%\decoRule
+\caption[Cambio en el número elegido periodo a periodo.]{Se presenta la relación entre las densidades de las distribuciones prior y posteriores en el punto de “no tamaño del efecto” computadas con las pruebas-T bayesianas de una sola muestra realizadas para evaluar las diferencias normalizadas de los participantes A en cada periodo contenidos en el subjuego 2.}
+\label{fig:DiferenciasNormalizadas_Subjuego2_A}
+\end{figure}
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.70\textwidth]{Figures/Fig_10} 
+%\decoRule
+\caption[Cambio en el número elegido periodo a periodo.]{CSe presenta la relación entre las densidades de las distribuciones prior y posteriores en el punto de “no tamaño del efecto” computadas con las pruebas-T bayesianas de una sola muestra realizadas para evaluar las diferencias normalizadas de los participantes D y E en cada periodo contenidos en el subjuego 2.}
+\label{fig:DiferenciasNormalizadas_Subjuego2_DE}
+\end{figure}
+
+Se repitió el cálculo de las diferencias normalizadas en los cuatro periodos del subjuego 2 omitiendo la multiplicación por $p$, con el propósito de evaluar si los jugadores tomaron en cuenta este cálculo para la elección de su número. Tras la realización de las pruebas-T bayesianas de una sola muestra,  sólo se encontraron diferencias significativas entre las elecciones y las creencias de los participantes A en los dos primeros  periodos, (ver Tabla~\ref{DN_Sub2_A_NoP}). En general, la magnitud de las diferencias parece ser mayor en todos los periodos cuando se excluye la multiplicación por $p$ que cuando esta sí es incluida. Este resultado sugiere que los jugadores con experiencia previa sí tomaron en cuenta la multiplicación por $p$, o por lo menos aprendieron desde el primer subjuego que el número objetivo siempre está por debajo del número promedio.\\
+
+Por otra parte, en el caso de los participantes sin experiencia (D y E) solo se encontraron diferencias significativas respecto de $0$ en el último periodo (ver Tabla~\ref{DN_Sub2_DE_NoP}), resultado que coincide con lo reportado en el subjuego 1, sugiriendo nuevamente que los participantes incorporaron la multiplicación por $p$ (o comprendieron la tendencia del juego hacia el equilibrio)  solo después de varias repeticiones. Así mismo, en las Figuras ~\ref{fig:DiferenciasNormalizadas_Subjuego2_A_NoP} y ~\ref{fig:DiferenciasNormalizadas_Subjuego2_DE_NoP} se presentan las distribuciones prior y posterior computadas en las pruebas-T realizadas por cada periodo para los participantes con y sin experiencia.\\
+
+
+\begin{table}
+\caption[Diferencias Normalizadas en el Subjuego 2, omitiendo la multiplicación $\cdot p$ (Participantes A)]{Prueba-T bayesiana de una sola muestra que compara contra 0 las diferencias promedio entre las creencias y las elecciones del participante A en cada periodo del segundo subjuego, sin incluir la multiplicación por $p$.}
+\label{DN_Sub2_A_NoP}
+\centering
+\begin{tabular}{l | c c c}  %'|' señala Líneas verticales
+\toprule
+%\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
+\textbf{} & \textbf{BF$_{01}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\midrule
+Periodo 5 & 0.537 0& 0.001 & 0.333 \\
+Periodo 6 & 0.046 & 9.917$e^{-5}$ & 0.414 \\
+Periodo 7 & 1.274 & 0.004 & 0.238 \\
+Periodo 8 & 0.643 & 0.003 & 0.438 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption[Diferencias Normalizadas en el Subjuego 2, omitiendo la multiplicación $\cdot p$ (Participantes D y E)]{Prueba-T bayesiana de una sola muestra que compara contra 0 las diferencias promedio entre las creencias y las elecciones de los participantes D y E en cada periodo del segundo subjuego, sin tomar en cuenta la multiplicación por $p$.}
+\label{DN_Sub2_DE_NoP}
+\centering
+\begin{tabular}{l | c c c}  %'|' señala Líneas verticales
+\toprule
+%\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
+\textbf{} & \textbf{BF$_{01}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\midrule
+Periodo 5 & 4.265 0& 0.022 & 0.024 \\
+Periodo 6 & 1.417 & 0.004 & 0.170 \\
+Periodo 7 & 3.541 & 0.021 & 0.071 \\
+Periodo 8 & 0.115 & 7.221$e^{-4}$ & 0.440 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.70\textwidth]{Figures/Fig_11} 
+%\decoRule
+\caption[Cambio en el número elegido periodo a periodo.]{Se presenta la razón entre las densidades de las distribuciones prior y posteriores  computadas con las pruebas-T bayesianas de una sola muestra realizadas para evaluar las diferencias normalizadas de los participantes A en cada periodo contenidos en el subjuego 2, sin tomar en cuento la multiplicación por p..}
+\label{fig:DiferenciasNormalizadas_Subjuego2_A_NoP}
+\end{figure}
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.70\textwidth]{Figures/Fig_12} 
+%\decoRule
+\caption[Cambio en el número elegido periodo a periodo.]{Se presenta la razón entre las densidades de las distribuciones prior y posteriores  computadas con las pruebas-T bayesianas de una sola muestra realizadas para evaluar las diferencias normalizadas de los participantes D y E en cada periodo contenidos en el subjuego 2, sin tomar en cuento la multiplicación por p..}
+\label{fig:DiferenciasNormalizadas_Subjuego2_DE_NoP}
+\end{figure}
+
+Posteriormente, se computaron las diferencias relativas entre creencias y elecciones en los cuatro periodos del subjuego 2 y se realizaron pruebas-T bayesianas para determinar si estas eran significativamente diferentes de $0$. Los resultados de este análisis se presentan en la Tabla~\ref{DR_Sub2_A} para el participante A y en la Tabla~\ref{DR_Sub2_DE} para los participantes D y E.\\
+
+\begin{table}
+\caption[Diferencias Relativas en el Subjuego 2, (Participantes A)]{Prueba-T bayesiana de una sola muestra que compara contra 0 las diferencias promedio entre las creencias y las elecciones del participante A en cada periodo del segundo subjuego.}
+\label{DR_Sub2_A}
+\centering
+\begin{tabular}{l | c c c}  %'|' señala Líneas verticales
+\toprule
+%\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
+\textbf{} & \textbf{BF$_{01}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\midrule
+Periodo 5 & 3.085 0& 0.006 & -0.042 \\
+Periodo 6 & 2.231 & 0.007 & -0.007 \\
+Periodo 7 & 1.832 & 0.002 & -0.162 \\
+Periodo 8 & 3.165 & 0.007 & 0.038 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption[Diferencias Relativas en el Subjuego 2, (Participantes D y E)]{Prueba-T bayesiana de una sola muestra que compara contra 0 las diferencias promedio entre las creencias y las elecciones de los participantes D y E en cada periodo del segundo subjuego.}
+\label{DR_Sub2_DE}
+\centering
+\begin{tabular}{l | c c c}  %'|' señala Líneas verticales
+\toprule
+%\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
+\textbf{} & \textbf{BF$_{01}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\midrule
+Periodo 5 & 0.272 0& 0.002 & -0.407 \\
+Periodo 6 & 0.044 & 3.044$e^{-4}$ & -0.283 \\
+Periodo 7 & 0.080 & 4.394$e^{-4}$ & -0.341 \\
+Periodo 8 & 4.295 & 0.022 & -0.007 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Los resultados que se obtienen son muy similares a lo que se observa al utilizar el método de diferencias normalizadas: el participante A muestra ser consistente en los cuatro periodos y los participantes D y E son inconsistencias en los primeros tres. En las Figuras~\ref{fig:DiferenciasRelativas_Subjuego2_A} y ~\ref{fig:DiferenciasRelativas_Subjuego2_DE} se incluyen las distribuciones prior y posterior de cada prueba-T bayesiana realizada por periodo, por cada tipo de participante.\\
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.70\textwidth]{Figures/Fig_13} 
+%\decoRule
+\caption[Cambio en el número elegido periodo a periodo.]{Se presenta la razón entre las densidades de las distribuciones prior y posteriores  computadas con las pruebas-T bayesianas de una sola muestra realizadas para evaluar las diferencias relativas de los participantes A en cada periodo contenidos en el subjuego 2.}
+\label{fig:DiferenciasRelativas_Subjuego2_A}
+\end{figure}
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.70\textwidth]{Figures/Fig_14} 
+%\decoRule
+\caption[Cambio en el número elegido periodo a periodo.]{Se presenta la razón entre las densidades de las distribuciones prior y posteriores  computadas con las pruebas-T bayesianas de una sola muestra realizadas para evaluar las diferencias relativas de los participantes D y E en cada periodo contenidos en el subjuego 2.}
+\label{fig:DiferenciasRelativas_Subjuego2_DE}
+\end{figure}
+
+Finalmente, se repitió el cálculo de las diferencias relativas entre las creencias y las elecciones de los participantes, omitiendo la multiplicación por p y se realizaron pruebas-T bayesianas para comparar las diferencias computadas en cada periodo contra 0. En la Tabla~\ref{DR_Sub2_A_NoP} se presentan los resultados de las pruebas realizadas para evaluar las diferencias calculadas para los participante A en cada periodo, y en la Tabla~\ref{DR_Sub2_DE_NoP} para los participantes D y E. De acuerdo a estos análisis, se observó  en los participantes A una reversión de las significancias estadísticas reportadas en todos los periodos y diferencias en promedio más grandes, lo que sugiere que las creencias de estos jugadores son más consistentes con sus elecciones cuando se asume que tomaron en cuenta la multiplicación por p. Por su parte, los participantes D y E también presentan una reversión en la significancia de las pruebas realizadas por periodo, pero en su caso, las diferencias promedio parecen ser más pequeñas cuando sí se considera la multiplicación por p, excepto en el último periodo. Este último hallazgo es consistente con la idea sugerida por lo reportado al evaluar las diferencias considerando la multiplicación por p: los participantes aprenden a multiplicar por p en los últimos periodos del subjuego. En las Figuras~\ref{fig:DiferenciasRelativas_Subjuego2_A_NoP} y ~\ref{fig:DiferenciasRelativas_Subjuego2_DE_NoP} se presentan las distribuciones prior y posterior computadas en cada prueba-T realizada por periodo para los  participantes A y para los participantes D y E, respectivamente.\\
+
+
+\begin{table}
+\caption[Diferencias Relativas en el Subjuego 2, omitiendo la multiplicación $\cdot p$ (Participantes A)]{Prueba-T bayesiana de una sola muestra que compara contra 0 las diferencias promedio entre las creencias y las elecciones del participante A en cada periodo del segundo subjuego, omitiendo la multiplicación por $p$.}
+\label{DR_Sub2_A_NoP}
+\centering
+\begin{tabular}{l | c c c}  %'|' señala Líneas verticales
+\toprule
+%\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
+\textbf{} & \textbf{BF$_{01}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\midrule
+Periodo 5 & 3.883 0& 4.510$e^{-4}$ & 0.346 \\
+Periodo 6 & 25.537 & 1.528$e^{-4}$ & 0.386 \\
+Periodo 7 & 0.896 & 0.008 & 0.225 \\
+Periodo 8 & 2.753 & 1.237$e^{-4}$ & 0.413 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption[Diferencias Relativas en el Subjuego 2, omitiendo la multiplicación $\cdot p$ (Participantes D y E)]{Prueba-T bayesiana de una sola muestra que compara contra 0 las diferencias promedio entre las creencias y las elecciones de los participantes D y E en cada periodo del segundo subjuego, sin tomar en cuenta la multiplicación por $p$.}
+\label{DR_Sub2_DE_NoP}
+\centering
+\begin{tabular}{l | c c c}  %'|' señala Líneas verticales
+\toprule
+%\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
+\textbf{} & \textbf{BF$_{01}$} & \textbf{Error$\%$} & \textbf{Mean Difference}\\
+\midrule
+Periodo 5 & 4.076 0& 0.022 & -0.056 \\
+Periodo 6 & 1.932 & 0.010 & -0.108 \\
+Periodo 7 & 4.066 & 0.022 & -0.038 \\
+Periodo 8 & 0.048 & 3.096$e^{-4}$ & 0.372 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.70\textwidth]{Figures/Fig_15} 
+%\decoRule
+\caption[Cambio en el número elegido periodo a periodo.]{Se presenta la razón entre las densidades de las distribuciones prior y posteriores  computadas con las pruebas-T bayesianas de una sola muestra realizadas para evaluar las diferencias normalizadas de los participantes A en cada periodo contenidos en el subjuego 2, sin tomar en cuento la multiplicación por p..}
+\label{fig:DiferenciasRelativas_Subjuego2_A_NoP}
+\end{figure}
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.70\textwidth]{Figures/Fig_16} 
+%\decoRule
+\caption[Cambio en el número elegido periodo a periodo.]{Se presenta la razón entre las densidades de las distribuciones prior y posteriores  computadas con las pruebas-T bayesianas de una sola muestra realizadas para evaluar las diferencias normalizadas de los participantes D y E en cada periodo contenidos en el subjuego 2, sin tomar en cuento la multiplicación por p..}
+\label{fig:DiferenciasRelativas_Subjuego2_DE_NoP}
+\end{figure}
+
+En general, los resultados obtenidos en términos de la evaluación de la consistencia con que los jugadores con experiencia responden en el segundo subjuego, (en comparación con los otros jugadores sin experiencia), apuntan a que la reducción reportada por Lahav \parencite*{Lahav2015} en las diferencias entre las elecciones y las creencias de los participantes a lo largo una serie de periodos de p-beauty contest, ocurre como producto de la experiencia adquirida por los participantes y no como co-producto del efecto de suelo asociado a la tendencia identificada en este tipo de juegos a elegir números cada vez más pequeños.\\
+
+\section{¿Las creencias se vuelven más precisas con la experiencia?}
+
+Finalmente, dado el efecto que la experiencia demostró tener sobre la ejecución de los participantes en juegos repetidos de p-beauty contest, tanto en la elección de sus números de acuerdo a la experiencia de otros jugadores, como a la adquisición de consistencia entre sus creencias y elecciones, se valoró una última pregunta de investigación derivada del tipo de datos obtenidos con el diseño propuesto. Dicha pregunta estuvo orientada a evaluar el efecto que pudo haber tenido la experiencia sobre la precisión en la predicción de las elecciones que los jugadores experimentados hacen sobre las elecciones de los otros jugadores.\\
+
+Se realizó un último conjunto de pruebas-T de dos muestras para comparar el número de veces que los participantes en los subjuegos 1 y 2 lograron acercarse (dentro de un margen de error de $\frac{+}{-}5$ ) a la predicción de los números a elegir por sus oponentes en cada periodo.\\
+
+Para evaluar el efecto de la experiencia sobre la precisión de las predicciones hechas acerca de las elecciones de sus oponentes, se comparó el número de predicciones acertadas hechas por los participantes A en el Subjuego 1 contra el número de aciertos que obtuvieron una vez adquiriendo experiencia, en el subjuego 2 y se encontró que hubo un aumento en la cantidad de aciertos obtenidos en el segundo subjuego ($41.25\%$) respecto del primero ($32.50\%$). Sin embargo, esta diferencia no fue significativa (prueba clásica $t = -1.312$, $p = 0.197 > 0.05$, prueba bayesiana $BF_{10} = 0.377$, $error = 4.241e^{-6}$).\\
+
+En el caso del resto de los participantes tampoco se observaron diferencias significativas en su capacidad para predecir las elecciones de los otros jugadores. Los participantes B y C que participaron en el subjuego 1 obtuvieron el $33.125\%$ de aciertos, mientras que los participantes D y E tuvieron un $35\%$ en el subjuego 2,  (prueba clásica $t = -0.349$, $p = 0.728 > 0.05$, prueba bayesiana $BF_{10} = 0.131$, $error = 2.907e^{-5}$).\\
+
+Con base en los análisis realizados para la evaluación de los posibles cambios en la precisión de las predicciones hechas por cada jugador acerca de las elecciones de sus oponentes, se concluye que la experiencia no parece tener un efecto significativo sobre la habilidad de los participantes de anticipar las tiradas de sus contrincantes. Este resultado hace sentido con la manipulación experimental propuesta en el presente estudio: los participantes D y E que juegan con los participantes A en el segundo subjuego, son independientes de los participantes con los que jugaba en el primero (B y C), y no habría razón para esperar que sigan las mismas estrategias en la elección de sus tiradas.\\
