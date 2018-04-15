@@ -1,0 +1,407 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 2.4 (22/11/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Version 2.x major modifications by:
+% Vel (vel@latextemplates.com)
+%
+% This template is based on a template by:
+% Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
+% Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
+%
+% Template license:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+12pt, % The default document font size, options: 10pt, 11pt, 12pt
+%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
+spanish, % ngerman for German
+onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespacing or singlespacing
+%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+%liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
+%toctotoc, % Uncomment to add the main table of contents to the table of contents
+%parskip, % Uncomment to add space between paragraphs
+%nohyperref, % Uncomment to not load the hyperref package
+headsepline, % Uncomment to get a line under the header
+%chapterinoneline, % Uncomment to place the chapter title next to the number on one line
+%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+]{MastersDoctoralThesis} % The class file specifying the document structure
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{graphics}
+\usepackage{utopia} % Use the Palatino font by default
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{hyperref}
+%\usepackage{arial}
+%
+%\usepackage{natbib}
+%\setcitestyle{authoryear,open={((},close={))}}
+
+%\usepackage{apacite}
+
+%\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+
+\usepackage[natbibapa]{apacite}
+\setcitestyle{authoryear,open={},close={}}
+\bibliographystyle{apacite}
+
+%\addbibresource{Bib_Adrifelcha.bib} % The filename of the bibliography
+
+%\bibliographystyle{apacite}
+%\bibliography{Bib_Adrifelcha.bib}
+
+%\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+%\usepackage[pass,paperwidth=6.7in,paperheight=9in]{geometry}
+
+\geometry{
+%paperwidth=6.7in,
+%paperheight=9in
+paper=letterpaper,
+inner=3.5cm, % Inner margin
+outer=3cm, % Outer margin
+%bindingoffset=.5cm, % Binding offset
+top=2.5cm, % Top margin
+bottom=2.5cm, % Bottom margin
+%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%\geometry{
+%	paper=a4paper, % Change to letterpaper for US letter
+%	inner=2.5cm, % Inner margin
+%	outer=3.8cm, % Outer margin
+%	bindingoffset=.5cm, % Binding offset
+%	top=1.5cm, % Top margin
+%	bottom=1.5cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+%}
+
+%----------------------------------------------------------------------------------------
+%	THESIS INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thesistitle{Niveles Cognitivos y Creencias en Juegos} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\supervisor{Dr. Arturo Bouzas Riaño}%\textsc{Bouzas}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+\examiner{Dr. Óscar Zamora Arévalo}%\textsc{Palafox}} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
+\degree{Licenciatura en Psicología} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
+\author{Jaime Osvaldo Islas Farias}%\textsc{Chávez De la Peña}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
+\addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
+
+\subject{Psicología} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
+\keywords{Teoría de Juegos, Razonamiento iterado, pBeauty contest} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
+\university{Universidad Nacional Autónoma de México} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
+\department{Laboratorio 25 de Comportamiento Adaptable}
+% Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+\group{Laboratorio de Comportamiento Adaptable} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
+\faculty{Facultad de Psicología} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+
+\sinodalA{Mtro. Miguel Herrera Ortíz}
+\sinodalB{Lic. Ligia Colmenares}
+\sinodalC{Lic. José Luis Baroja Manzano}
+
+\city{Ciudad de México}
+\degreemonth{Abril}
+\degreeyear{2018}
+
+\proyectopapiit{PAPIIT IN307214}
+
+\AtBeginDocument{
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+}
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+
+\begin{minipage}[c][8.5in][s]{1in}
+\centering
+\hspace*{-0.2in} \includegraphics[width=1.1in]{Escudo-UNAM}\\[10pt]
+\hskip 2pt\vrule width 2pt height 6.1in
+\hskip 1mm\vrule width 1pt height 6.1in\\[10pt]
+\hspace*{-0.2in} \includegraphics[width=1.2in]{PSI}
+\end{minipage}\hskip 10pt
+% Right layout - Titles
+\begin{minipage}[c][\textheight][s]{5.125in}
+\centering
+% University, institute, department and title
+{\Large\scshape\univname}
+\vspace{3mm}\hrule height2pt
+\vspace{1mm}\hrule height1pt
+\vspace{3mm}
+%\@ifundefined{\facname}{\relax}{{\large\scshape\facname}\\[3pt]}
+{\scshape\facname}\par
+% Title
+\vfill\vfill
+{\def\baselinestretch{1}\LARGE\scshape\ttitle\par}
+\vfill\vfill
+% Degree, author, supervisor and date
+\makebox[8cm][s]{\Huge T E S I S}\\[8pt]
+QUE PARA OBTENER EL GRADO DE:\\[8pt]
+{\scshape\degreename}\\[16pt]
+{\huge P  R  E  S  E  N  T  A:}\\[8pt]
+{\large {\scshape\authorname}}\par
+\vfill
+{\small DIRECTOR DE TESIS:\\{\scshape\supname}}\par
+\vfill
+{\small REVISOR:\\{\scshape\examname}}\par
+\vfill
+{\small SINODALES:\\{\scshape\SinodalA}\\{\scshape\SinodalB}\\{\scshape\SinodalC}}\par
+\vfill
+{\small Con el apoyo de:\\Proyecto {\scshape\PAPIIT}}\par
+\vfill
+%{\today}
+{\hspace*{0.2in}\scshape\city\hfill\today}
+\end{minipage}
+\end{titlepage}
+
+
+
+\begin{titlepage}
+\centering\large
+{\def\baselinestretch{1.2}\Large\bfseries\ttitle\par}\\
+\vspace{12mm}
+por\par
+\vspace{12mm}
+{\Large\authorname}
+\vspace{25mm}
+\par
+Tesis presentada para obtener la\par
+\vspace{12mm}
+\degreename\par
+\vspace{12mm}
+en la\par 
+\vspace{12mm}
+\facname
+\par
+\vspace{12mm}
+{\Large\scshape\univname}
+\vspace{25mm}
+\par
+\city, \today
+\end{titlepage}}
+
+
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%----------------------------------------------------------------------------------------
+
+%\begin{declaration}
+%\addchaptertocentry{\authorshipname} % Add the declaration to the table of contents
+%\noindent Yo, \authorname, declaro que la tesis aquí presentada bajo el título \enquote{\ttitle}, es de mi entera autoría, aclarando que:\\
+
+%\begin{itemize} 
+%\item La presente tesis fue desarrollada en el Laboratorio 25 de la Facultad de Psicología de la Universidad Nacional Autónoma de México, bajo la tutela del Dr. Arturo Bouzas Riaño. 
+%\item Ningún dato aquí presentado ha sido utilizado con anterioridad para recibir un grado académico ni en ésta ni en ninguna otra Universidad. 
+%\item Las ideas cuya autoría no me corresponde están clara y adecuadamente señaladas en el texto. 
+%\item Así mismo, he señalado y dado crédito a toda fuente y material de apoyo consultados (lenguajes de programación, códigos base y manuales).
+%\item Todas las figuras que se presentan a lo largo de la presente tesis fueron elaboradas por la autora de la misma, por medio de los IDE's RStudio (para R) y Spyder (para Python), excepto cuando se señala lo contrario.
+%\item Cualquier porción del trabajo aquí expuesto que se haya realizado en colaboración directa o indirecta con un tercero, es señalada y presentada con claridad.
+%\item El presente proyecto de investigación fue realizado con el apoyo de los proyectos PAPIIT IN307214 y PAPIME PE310016.\\
+%\end{itemize}
+ 
+%\noindent Firma:\\
+%\rule[0.5em]{25em}{0.5pt} % This prints a line for the signature
+ 
+%\noindent Fecha:\\
+%\rule[0.5em]{25em}{0.5pt} % This prints a line to write the date
+%\end{declaration}
+
+%\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+
+%\vspace*{0.2\textheight}
+
+%\noindent\enquote{\itshape Research is what I'm doing when I don't know what I'm doing.}\bigbreak
+
+%My experiences with science led me to God. They challenge science to prove the existence of God. But must we really light a candle to see the sun?
+%1972
+
+%Read more at: https://www.brainyquote.com/quotes/authors/s/steven_pinker_2.html
+%\hfill Wernher von Braun, 1957.\\
+
+%\vspace*{0.3\textheight}
+
+%\hfill(Apparently, I've been doing research my whole life\ldots)
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+
+Un concepto clave en el estudio de Teoría de Juegos es el razonamiento iterado, proceso en el que los jugadores incorporan las creencias que tienen sobre la conducta de los otros jugadores en su toma de decisiones. P-Beauty contest es un juego utilizado para estudiar este proceso, en el que los participantes eligen simultáneamente un número en el rango [0 -100] y el jugador que haya elegido el número más cercano a 2/3 del promedio de todos los números es el ganador. Personas reales no se comportan de acuerdo al equilibrio de Nash del juego (elegir 0), pero se acercan a este paulatinamente en juegos repetidos. Se han propuesto modelos que dan cuenta de la conducta real de las personas, capturando la noción de que la elección es un reflejo del número de pasos de razonamiento iterado que las personas son capaces de realizar (nivel cognitivo) y de las creencias que tienen sobre el nivel cognitivo de los demás. Esta tesis estudia la consistencia entre estas elecciones y creencias, y la forma en que esta relación cambia cuando se adquiere experiencia en el juego, al jugarlo de forma repetida. Se utilizó un diseño experimental de juegos repetidos de p-beauty contest con dos subjuegos de 4 periodos. Un jugador participó en los dos subjuegos, mientras que los demás jugadores fueron sustituidos entre subjuegos. Esta manipulación garantiza que un participante cuenta con más experiencia que los demás en el segundo subjuego, y revierte parcialmente la tendencia a elegir números más cercanos a 0 en juegos repetidos (efecto de reset). Además de registrar su número, los participantes indicaron qué número creían que iban a elegir los demás (explicitación de creencias). Se encontró que la entrada de nuevos participantes al juego incrementa el número elegido de los jugadores con experiencia, pero la diferencia entre sus creencias y elecciones no incrementa junto con este, lo que aporta evidencia de que la consistencia entre creencias y elecciones incrementa con la experiencia.\\ 
+\end{abstract}
+
+
+
+\cleardoublepage
+\vspace*{0.11\textheight}
+\begin{center}
+	{\huge\textit{Abstract} \par}
+	\bigskip
+	\bigskip
+	{\normalsize\bfseries Cognitive Levels and Beliefs in games \par} % Thesis title
+	\medskip
+	{\normalsize by \authorname \par} % Author name
+	\bigskip
+\end{center}
+A key concept in game theory is iterated reasoning, the process in which players take into account the beliefs they have about the behavior of other players in their decision making. P-beauty contest is a game that is used to study this process, in which participants choose simultaneously a number in the range [0-100], and the player that selected the number closest to 2/3 of the mean of all numbers is the winner. Real people don’t behave according to the Nash equilibrium of the game (choosing 0), but get closer to it in repeated games. Models have been proposed that explain the actual behavior of people, capturing the notion that choices are an indication of the number of steps of iterated reasoning that people are capable of taking (cognitive level) and the beliefs they have about the cognitive level of others. This thesis studies the consistency between choices and beliefs, and the way this relationship is affected by acquiring experience in the game, product of repeated play. An experimental design of repeated p-beauty contest games with two subgames of 4 periods each was used. One participant played in both subgames, while the other players were changed between subgames. This manipulation guaranteed that one player had more experience than the others in the second subgame, and also partially reverted the trend of choosing numbers closer to 0 seen in repeated games (reset effect). Besides recording the chosen number, participants had to state the number they believe the other players would choose (elicited beliefs). It was found that the introduction of new players in the game indeed increased the chosen number of experienced players, but the difference between their beliefs and choices did not increased. This supports the idea that consistency between beliefs and choices increases with experience.\\
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+\begin{acknowledgements}
+\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the 
+\\
+A Jaime Islas Curiel, mi papá, por siempre apoyar mis decisiones, incluso si estas no siempre son las más acertadas. Es gracias al esfuerzo con el has salido a trabajar todos los días durante todos estos años que he podido llegar hasta este punto en mi vida académica, profesional y personal. Gracias por enseñarme (con el ejemplo, por si fuera poco) a ser una persona con principios y valores.\\
+
+Póstumamente a Beatriz Farias Orozco, mi mamá, sin quien, literalmente, yo no estaría aquí. Es también gracias a tu ejemplo (y tus regaños) que me he convertido en el hombre que soy hoy. Quiero pensar que estarías muy feliz por este logro, y orgullosa de mí.\\
+
+A Adriana Felisa Chávez De la Peña, mi princesa, el amor de mi vida. Gracias a tu ayuda y apoyo (académico y emocional) esta tesis es una realidad. El amor que te tengo y la expectativa de hacer mi vida contigo me hacen mejorar continuamente como persona. Gracias por ser mi mejor amiga, compañera y el amor de mi vida.\\
+
+Si los amigos son la familia que uno escoge, entonces la familia son los amigos que no escogemos, pero que están ahí incondicionalmente y durante toda nuestra vida. Gracias a toda mi familia por su cariño y apoyo permanente; a mi abuelita y a mis tíos por ser como mis segundos papás, y a mis primos por ser como mis hermanos.\\
+
+A mis amigos, a quienes no enlisto, porque ellos saben quiénes son (y así evito momentos incómodos si me olvido de mencionar a alguno). La vida está llena de giros inesperados y nunca sabemos dónde terminaremos el día de mañana. Pero aunque no siempre somos una presencia constante en nuestras vidas, y coincidimos solo de forma intermitente, sabemos que nuestra amistad se mantiene. Gracias por todos los momentos divertidos y entrañables.\\
+
+A todos los masoquistas del Lab 25, que pudiendo hacer cosas más sencillas, siempre eligen ir más lejos y aceptar los mayores desafíos. Gracias por poner la vara tan alta en la calidad de todos sus proyectos; estar rodeado de estudiantes tan brillantes y trabajadores inevitablemente me impulsó a esforzarme más para intentar alcanzar los estándares establecidos por todos ustedes. Espero que la consideren esta tesis una entrada digna al catálogo de investigaciones realizadas en el Lab 25.\\
+
+A todos los profesores que participaron en mi formación; para bien o para mal, esta tesis y lo que venga después son un producto parcial de sus enseñanzas. Particularmente agradezco a los miembros de mi comité: A Ligia Colmenares, por sus excelentes comentarios y observaciones al borrador de esta tesis. A Miguel Herrera, porque fueron sus clases en los primeros semestres de la carrera lo que me hizo acercarme al área de la psicología experimental, y en los últimos semestres a teoría de juegos. A José Luis Baroja, con quien he tratado como profesor así como compañero en el Lab 25, y en ambos casos he aprendido muchísimo; considero que José Luis es el modelo ejemplar de cómo debe ser un investigador. A Oscar Zamora, cuyas excelentes clases fueron también un pilar en mi formación y contribuyeron a mi amor por el área. Y finalmente, de manera particular, al “Doc” Arturo Bouzas. Gracias por sus consejos siempre pertinentes y concretos, que permitieron volver una realidad esta tesis, desde que comenzó como solo una idea vaga y difusa. Admiro muchísimo su brillantez y sabiduría, producto de una vida de experiencia académica. Gracias a todos por compartirme su conocimiento y experiencia en mi formación como investigador.
+A mis compañeras de trabajo en el CEPE. Por abrirme las puertas al atemorizante mundo de los adultos de forma relativamente indolora, y enseñarme que algunas de las habilidades que nos enseñan en la escuela son, de hecho, utilizadas en la vida real. Son todas un ejemplo de responsabilidad, esfuerzo y pasión por el trabajo, y mi punto de referencia sobre cómo hay que desenvolverse en el mundo profesional.\\
+
+A ti, misterioso lector. Que estés leyendo mi tesis justifica su redacción más allá de su función como requisito para titularme.\\
+\end{acknowledgements}
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Prints the main table of contents
+
+\listoffigures % Prints the list of figures
+
+\listoftables % Prints the list of tables
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+
+%\textbf{AUC} & \textbf{A}rea-\textbf{U}nder (the) \textbf{C}urve\\
+%\textbf{CDF} & \textbf{C}umulative \textbf{D}ensity \textbf{F}unction\\
+%\textbf{CSV} & \textbf{C}omma \textbf{S}eparated \textbf{V}alues\\
+%\textbf{JASP} & \textbf{J}effrey's \textbf{A}mazing \textbf{S}tatistics \textbf{P}rogran\\
+%\textbf{SDT} & \textbf{S}ignal \textbf{D}etection \textbf{T}heory\\
+%\textbf{ROC} & \textbf{R}eceiver-\textbf{O}perating \textbf{C}haracteristic curve\\
+%\textbf{RT} & \textbf{R}esponse \textbf{T}ime\\
+%\textbf{MOC} & \textbf{M}emory-\textbf{O}perating \textbf{C}haracteristic curve\\
+
+\end{abbreviations}
+
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+
+%\dedicatory{\textit{En memoria de...}\\\\
+%\vspace{30mm}
+%Mi tía,\\
+%María Eugenia Leticia De la Peña Cortina\\
+%(1956-2011)\\\\
+%\vspace{20mm}
+%Mi padrino,\\
+%Tomás Munguía Ramírez\\
+%(1958-2017)\\\\
+%\vspace{10mm}
+% y\\\\
+%\vspace{10mm}
+%Mi abue,\\
+%Guadalupe Cortina González\\
+%(1928-2018)} 
+
+
+%\vspace*{0.2\textheight}
+
+%\noindent\enquote{\itshape Arriésgate, equivócate, cáete... pero vive.}\bigbreak
+
+%\hfill Mi tía Letty, \\Mayo del 2009.
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{thesis} % Return the page headers back to the "thesis" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+
+\include{Chapters/Cap_Intro}
+\include{Chapters/Cap_Marco} 
+\include{Chapters/Cap_Metodo} 
+\include{Chapters/Cap_Resultados} 
+\include{Chapters/Cap_Disc}
+\include{Chapters/Cap_Conclusion}
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+%\include{Appendices/Felisa_Consentimiento}
+%\include{Appendices/App_Inst}
+%\include{Appendices/App_Registro}
+%\include{Appendices/App_Data}
+%\include{Appendices/AppendixB}
+%\include{Appendices/AppendixC}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+%\printbibliography[heading=bibintoc]
+%\include{Bib_Adrifelcha.bib}
+
+%\bibliographystyle{apalike}
+%\bibliography{Bib_Adrifelcha}
+
+\bibliography{Bib_Jaime}
+%----------------------------------------------------------------------------------------
+
+\end{document}  

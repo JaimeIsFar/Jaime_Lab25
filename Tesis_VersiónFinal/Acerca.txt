@@ -1,0 +1,18 @@
+Para integrar la bibliografia
+
+pdflatex file-name.tex
+Bibtec file-name.aux
+pdflatex file-name.tex
+pdflatex file-name.tex
+
+
+-------------------
+Después de haber entregado al Doc la tesis que se presenta en
+"Revisión Niño" y de haber pasado ésta a un template que se
+acopla con los requisitos establecidos por la UNAM,
+esta carpeta contiene una versión donde se modificó el siguiente contenido:
+
+1) Agradecimientos
+2) El formato de las figuras
+3) Incorpora las correcciones del doc
+4) Inclusion de phi inversa como metodo para estimar Z a partir de probabilidades

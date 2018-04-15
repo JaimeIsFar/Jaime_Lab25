@@ -1,0 +1,76 @@
+% Chapter 1
+\chapter{Marco Teórico} % Main chapter title
+
+\label{Cap_SDT} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+%----------------------------------------------------------------------------------------
+
+% Define some commands to keep the formatting separated from the content 
+\newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\tabhead}[1]{\textbf{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\file}[1]{\texttt{\bfseries#1}}
+\newcommand{\option}[1]{\texttt{\itshape#1}}
+
+%----------------------------------------------------------------------------------------
+
+\section{Modelo de nivel-k}
+
+Este modelo fue propuesto por Nagel (1995) para dar cuenta de la conducta de las personas en juegos con solución por dominancia, como ocurre en p-beauty contest. El modelo define niveles cognitivos que describen el número de pasos de razonamiento iterado que realiza una persona en el juego y difiere respecto de los modelos de equilibrio clásicos en que las creencias que se tienen sobre las elecciones de los otros jugadores no están basadas en la definición del equilibrio (Crawford, Costa-Gomes & Iriberri, 2013), es decir, se admite la posibilidad de que los otros jugadores no son perfectamente racionales.
+Según este modelo, los jugadores con un nivel cognitivo 0 serían aquellos que no realizan ningún paso de razonamiento iterado, es decir, que no toman en consideración que las elecciones de los otros participantes inﬂuyen en el cálculo del número objetivo. Estos jugadores eligen un número con base en alguna regla arbitraria, (por ejemplo, su número de la suerte o favorito), por lo que podrían elegir cualquier número dentro del rango establecido con una probabilidad similar.\\
+
+Un jugador de nivel 1 es aquél que se sí considera que las elecciones de los otros jugadores influyen en el cálculo del número objetivo, pero supone que los otros jugadores no han tomado esto en consideración; el jugador de nivel 1 asume que los demás jugadores son de nivel 0 y elige el número que es la respuesta óptima contra este tipo de jugadores. El jugador asume que la media de números elegidos por todos los jugadores estará cerca de 50 (el mejor predictor de la media de un conjunto de números aleatorios en el rango [0 - 100]) y multiplicará este número por p para acercarse lo más posible al número objetivo.\\
+
+Por su parte, un jugador de nivel 2 no solo considera que las elecciones de otros jugadores influyen en el número objetivo, sino que también asume que los otros jugadores saben esto; el jugador de nivel 2 elegirá el número que es la respuesta óptima contra una población de oponentes de nivel 1. Como estos eligen números cercanos a 50*p, el jugador de nivel 2 debe multiplicar por p nuevamente para acercarse al que piensa que será el número objetivo, esto es 50×p^2.\\
+
+En general, un jugador de nivel k elegirá la respuesta óptima contra una población de jugadores de nivel k-1, esto es 50× p^k.  Con base en esta regla, el modelo  computa el nivel cognitivo de los jugadores en función a cuál de los intervalos de elección establecidos por el modelo pertenece su número elegido. 
+Una variación más sofisticada del modelo de nivel-k es el modelo de jerarquía cognitiva, propuesto por Camerer, Ho, y Chong (2004). El modelo propone que un jugador de nivel k no sólo da la mejor respuesta contra jugadores k-1, sino a una combinación de todos los tipos de jugador desde el nivel 0 hasta k-1, a partir de una distribución Poisson que se actualiza de forma bayesiana. El modelo mantiene el supuesto de que las personas consideran que su nivel está por arriba del de los demás jugadores, y predice que hay un aprendizaje sobre los niveles k de los otros jugadores.\\
+
+En general, de acuerdo con la evidencia obtenida experimentalmente, los modelos de nivel-k explican mejor el comportamiento de las personas en juegos con solución por razonamiento iterado que los modelos de equilibrio (Crawford, Costa-Gomes & Iriberri, 2013).\\
+
+En ambos modelos la elección de los jugadores depende de tres elementos: 1) sus creencias sobre cómo juegan los participantes de nivel 0, 2) sus expectativas sobre el nivel cognitivo de los oponentes, y 3) el número de pasos de razonamiento que son capaces de hacer en el juego (Agranov et al., 2012).
+En la siguiente sección se ahonda sobre el segundo elemento: las expectativas (i. e. creencias) sobre el nivel cognitivo de los oponentes, y la evidencia que se ha encontrado sobre su relación con la elección.\\
+
+\section{Relación entre creencias y elecciones}
+
+Para aportar evidencia empírica de la influencia de las creencias acerca de la sofisticación de los otros jugadores sobre las elecciones de los jugadores en p-beauty contest, Agranov et al. (2012) manipularon las creencias que los participantes tenían sobre sus oponentes en un juego de p-beauty contest, informando a cada participante que jugaría contra 7 estudiantes graduados de economía con conocimiento sobre este tipo de juegos, o bien, contra 7 computadoras programadas para seleccionar con la misma probabilidad  números en el rango [0 – 100]. En este estudio se encontró que los números registrados por los participantes corresponden con un nivel cognitivo significativamente mayor en la condición en la que se enfrentaban a estudiantes graduados que en la condición de las computadoras. Este resultado parece sugerir que el nivel cognitivo que muestran las personas en juegos de p-beauty contest depende no únicamente de su sofisticación cognitiva, sino también de sus creencias sobre la sofisticación de los otros jugadores.\\
+
+Para estudiar de forma mucho más directa la relación entre creencias y elecciones, Lahav (2015) utilizó un método de elicited beliefs (la mejor forma de traducirlo sería “hacer explícitas las creencias”) en sesiones experimentales compuestas por 5 períodos de p-beauty contest con hasta 20 participantes. En cada periodo, además de elegir su propio número, se les pidió a los participantes que estimaran cuántos de los otros participantes elegirían un número dentro de cada uno de 10 intervalos dentro del el rango [0-100] (0-10, 11-20, 21-30, …, 91-100) y con dichas estimaciones, se calcularon las creencias de los participantes sobre el número promedio en cada periodo del juego. Al implementar este método, en contraste con investigaciones previas, Lahav concluye que las elecciones no son un reflejo preciso de las creencias de los participantes, pues encuentra diferencias significativas entre el número objetivo computado de acuerdo a las creencias de los participantes acerca de las tiradas de los demás jugadores y el número que de hecho eligen en el juego.
+Otra investigación con resultados similares fue realizada por Costa-Gomes y Weizsäcker en el 2008, utilizando un método para explicitar creencias en juegos sencillos de 3x3 (donde dos jugadores tienen que elegir entre tres estrategias posibles) en los que el razonamiento iterado permite llegar al equilibrio del juego. En dicha investigación, se encontró que en la mayoría de los casos, de acuerdo con el modelo de nivel-k, las creencias registradas por los jugadores acerca de sus oponentes los situaban en el nivel 2, mientras que sus elecciones correspondían al nivel 1. Ya que no parece que las  elecciones observadas habrían sido una respuesta óptima ante las creencias explicitadas que se registraron, este resultado pone en duda que estas últimas sean la base a partir de la cual los participantes emiten sus respuestas. A la luz de estos hallazgos, los autores concluyen que los jugadores basan sus decisiones en reglas de elección que influyen en ambas, creencias y decisiones.\\
+
+Debido a que el presente trabajo de tesis incorpora parte del método de Lahav (2015) para recopilar las creencias de los jugadores acerca de las tiradas de sus oponentes en juegos de p-beauty contest, se enfatizan los siguientes puntos respecto a este estudio: \\
+
+1) No se conoce con exactitud la creencia de los participantes sobre el número objetivo. Esta se calcula de manera aproximada, a partir del número de jugadores que se cree que elegirán un número en cada intervalo y tomando la media de cada intervalo como el valor más representativo de los mismos.\\
+
+2) Con alrededor de 20 personas participando en el juego, parece inverosímil, dada la demanda cognitiva, que los jugadores puedan calcular con precisión el número objetivo derivado de sus creencias para emitir su respuesta.\\
+
+3) Se contó con dos grupos control. En uno,  no se realizó la explicitación de creencias, y en el otro, dicho procedimiento se realizó después de que los participantes eligieran su número. Comparado la elección de los participantes en los grupos control con el grupo experimental, los resultados indican que solicitar a los participantes que registraran sus creencias no cambia significativamente  su número elegido.\\
+
+4) El último periodo del juego fue el único en el que no se encontraron diferencias significativas entre creencias y elecciones, lo que podría sugerir que dicha discrepancia disminuye con la experiencia.\\
+
+5) Dado que se sabe que los participantes tienden a elegir números cada vez más pequeños en cada periodo y que esto reduce invariablemente la magnitud de cualquier diferencia entre elecciones y creencias (ya que las diferencias entre números más pequeños son, por definición, más pequeñas), Lahav implementó un método de normalización con el que ponderó las diferencias entre las creencias y elecciones de cada participante en cada periodo por el promedio de los números elegidos por todos los participantes en dicho periodo. Sin embargo, como la medida de normalización depende de la tirada de todos los jugadores, la magnitud de la diferencia normalizada es influida por el nivel cognitivo promedio, y “castiga” (incrementa la magnitud) las diferencias entre creencias y elecciones cuando estas no son tan sofisticadas como las del promedio. Debido a esto, podría no ser la mejor forma de compensar la tendencia al equilibrio.
+El resultado mencionado en el punto 4 permite cuestionar si la discrepancia entre creencias y elecciones se ve afectada por la experiencia que tienen los participantes en el juego.  En la siguiente sección se revisa el efecto de la experiencia en juegos repetidos de p-beauty contest.\\
+
+\section{El efecto de la experiencia}
+
+Para estudiar el efecto de la experiencia en juegos repetidos de p-beauty contest, Slonim (2005) realizó sesiones experimentales de 12 periodos, distribuidos equitativamente en tres subjuegos, y con tres jugadores.
+En una primera condición, al terminar cada Subjuego se reemplazaba a dos de los tres participantes por jugadores nuevos, siendo que sólo un jugador permaneció en el experimento durante los 12 periodos completos. En una segunda condición, los dos participantes retirados al término de cada subjuego eran sustituidos por jugadores con la misma experiencia que el jugador que se mantenía en el juego (es decir, que habían jugado la misma cantidad de periodos). En ambas condiciones, los participantes tenían información acerca del nivel de experiencia de los demás jugadores (el número de periodos jugados).\\
+
+Slonim (2005) reportó que en el primer periodo de los subjuegos 2 y 3, los jugadores con más experiencia mostraron un mayor nivel cognitivo (es decir, eligieron números más cercanos a 0) cuando sabían que jugaban contra oponentes que contaban con la misma experiencia que ellos, que cuando jugaban contra oponentes que no habían jugado previamente. Este resultado aporta evidencia a favor de que las creencias sobre el nivel cognitivo de los otros jugadores influyen en las elecciones. Por su parte, los jugadores sin experiencia no mostraron diferencias signiﬁcativas en sus elecciones cuando jugaron con oponentes experimentados o no experimentados.\\
+
+En cuanto al efecto de la experiencia en el desempeño de los jugadores, también se observó que los jugadores experimentados ganan el juego con mayor frecuencia cuando juegan con jugadores sin experiencia, ventaja que se reduce periodo a periodo, conforme los otros jugadores adquieren experiencia.\\
+
+Un último resultado reportado por Slonim (2005), y probablemente el de mayor relevancia para efectos de la presente tesis, corresponde a un efecto de reset en la tendencia a ir reduciendo el número elegido en cada periodo, al iniciar un nuevo subjuego. Es decir, que los jugadores con experiencia presentan una reversión en la tendencia a elegir números cada vez más cercanos al equilibrio cuando nuevos jugadores entran en el juego.\\
+
+Con base en estos hallazgos, y los reportados en las secciones anteriores, se procede a plantear formalmente el objetivo de este trabajo de investigación, así como las estrategias metodológicas empleadas para llevarlo a cabo. \\
+
+\section{Objetivo}
+
+El presente trabajo de investigación busca evaluar si la reducción en las diferencias entre las creencias y elecciones, reportada con un método de explicitación de creencias similar al propuesto por Lahav (2015), es efecto principalmente de la experiencia obtenida al participar repetidas veces en un juego.\\
+
+Para responder a esta pregunta, se propone una versión modificada del método de Lahav (2015) que contempla la participación de un grupo más pequeño de jugadores, lo que facilita preguntar a los participantes directamente por las creencias sobre los números específicos que elegirán los demás participantes, permitiendo una estimación de las creencias más precisa y reduciendo la demanda cognitiva para los jugadores, de manera que resulta más verosímil esperar una correspondencia directa entre las elecciones de los participantes y el cómputo del número objetivo de acuerdo a sus creencias.\\
+
+Para atenuar el peso que tiene la tendencia a elegir números cada vez más pequeños entre cada periodo, se busca promover el efecto de reset reportado por Slonim (2005) en la elección de los jugadores con experiencia, al tener jugadores que participarán durante más de un subjuego y sustituyendo al resto por nuevos jugadores en un p-beauty contest repetido. Se espera que el efecto de reset opere no sólo en las elecciones, sino también en las creencias del jugador experimentado, lo que permitiría evaluar si la diferencia entre estas sigue reduciéndose, como ocurre en lo reportado por Lahav (2015) en el último periodo registrado, donde parece ser que las elecciones y las creencias se vuelven “consistentes”. Si, mediante el efecto de reset, el jugador experimentado elije un número más grande en el primer periodo del segundo subjuego pero la diferencia entre su elección y su creencia en dicho periodo disminuye, esto aportaría evidencia a favor de que la experiencia reduce las inconsistencias entre creencias y elecciones.\\
+
+En conjunto, el diseño experimental aquí propuesto permite determinar si las creencias de los jugadores que participan en los dos subjuegos se acercan más a las elecciones reales de los otros jugadores en el segundo subjuego gracias a que cuentan con mayor experiencia.\\
+
