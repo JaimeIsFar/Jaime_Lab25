@@ -2,23 +2,36 @@
 \chapter{Resultados} % Main chapter title
 \label{Cap_Res} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-Para el análisis de los resultados obtenidos, se utilizaron tanto pruebas estadísticas bayesianas como pruebas clásicas o frecuentistas. En el presente apartado se presentan únicamente los resultados de los análisis bayesianos, mientras que los resultados de los análisis clásicos se incluyen como apéndice; en general, ambas aproximaciones apuntan hacia las mismas conclusiones.\\
+Para el análisis de los resultados obtenidos, se utilizaron tanto pruebas estadísticas bayesianas como pruebas clásicas o frecuentistas. En el presente apartado se presentan únicamente los resultados de los análisis bayesianos, mientras que los resultados de los análisis clásicos se incluyen como apéndice. En general, ambas aproximaciones apuntan hacia las mismas conclusiones.\\
 
-\section{Análisis Bayesiano}
+\section{Análisis Bayesiano}\\
 
-Se decidió presentar los resultados del análisis bayesiano porque se considera que el factor de Bayes, que funciona como una alternativa al p-value como medida de significancia estadística, refleja de forma mucho más clara la  relación entre los datos obtenidos y las hipótesis nula y alternativa, al señalar cuántas veces es más probable que la evidencia haya sido producida bajo la hipótesis alterna respecto a la hipótesis nula (BF10), o viceversa (BF01).\\
+Se decidió presentar los resultados del análisis bayesiano porque se considera que el factor de Bayes, que funciona como una alternativa al $p-value$ como medida de significancia estadística, refleja de forma mucho más clara la  relación entre los datos obtenidos y las hipótesis nula y alternativa, al señalar cuántas veces es más probable que la evidencia haya sido producida bajo la hipótesis alterna respecto a la hipótesis nula ($BF_10$), o viceversa ($BF_01$).\\
 
-Consistencia entre creencias y elecciones en el primer subjuego
-El primer subjuego del presente experimento presenta una replicación parcial del experimento de Lahav (2015). En ambos casos se juega p-beauty contest por varios periodos y se utiliza un método para explicitar creencias. Las diferencias radican en el número de jugadores que participan en un periodo (3 en el presente experimento, y hasta 20 en el de Lahav), la cantidad de periodos jugados (4 en el presente experimento y 5 en el de Lahav), y el método utilizado para explicitar las creencias (en el presente experimento se preguntó directamente por el número que se creía elegirían los otros jugadores, mientras que en el experimento de Lahav se estimaba el número de jugadores que elegirían un número dentro de ciertos rangos).\\
+\section{Consistencia entre creencias y elecciones en el primer subjuego}\\
 
-En la Figura 1 se contrasta la elección de cada participante con su creencia promedio para cada uno de los periodos del subjuego 1, cuando se incluye la multiplicación por p y cuando esta se omite. Se observa que en ambos casos la diferencia entre creencias y elecciones se reduce periodo a periodo, pues en periodos posteriores los puntos se acercan más a la línea de identidad. Como ya se ha mencionado, esto puede deberse únicamente a que los valores elegidos se acercan más al límite inferior del espacio de elección.\\
+El primer subjuego del presente experimento presenta una replicación parcial del experimento de Lahav (\citeyear{Lahav}). En ambos casos se juega p-beauty contest por varios periodos y se utiliza un método para explicitar creencias. Las diferencias radican en el número de jugadores que participan en un periodo (3 en el presente experimento, y hasta 20 en el de Lahav), la cantidad de periodos jugados (4 en el presente experimento y 5 en el de Lahav), y el método utilizado para explicitar las creencias (en el presente experimento se preguntó directamente por el número que se creía elegirían los otros jugadores, mientras que en el experimento de Lahav se estimaba el número de jugadores que elegirían un número dentro de ciertos rangos).\\
 
-Figura 1. Contraste entre elecciones y creencias promedio. Los puntos más cercanos a la línea de identidad indican un mayor grado de consistencia. En la columna de la izquierda se incluye la multiplicación por p, mientras que en la derecha se omite.\\
+\begin{figure}[hp]
+\centering
+\includegraphics[width=0.45\textwidth]{Figures/F1_1} & \includegraphics[width=0.45\textwidth]{Figures/F1_2} 
+\includegraphics[width=0.45\textwidth]{Figures/F1_3} & \includegraphics[width=0.45\textwidth]{Figures/F1_4} 
+\includegraphics[width=0.45\textwidth]{Figures/F1_5} & \includegraphics[width=0.45\textwidth]{Figures/F1_6} 
+\includegraphics[width=0.45\textwidth]{Figures/F1_7} & \includegraphics[width=0.45\textwidth]{Figures/F1_8} 
+\decoRule
+\caption[Exploración visual de la consistencia entre creencias y elecciones]{Contraste entre elecciones y creencias promedio. Los puntos más cercanos a la línea de identidad indican un mayor grado de consistencia. En la columna de la izquierda se incluye la multiplicación por p, mientras que en la derecha se omite.}
+\label{fig:Consistencia}
+\end{figure}
+
+En la Figura~\ref{fig:Consistencia} se contrasta la elección de cada participante con su creencia promedio para cada uno de los periodos del subjuego 1, cuando se incluye la multiplicación por $p$ y cuando esta se omite. Se observa que en ambos casos la diferencia entre creencias y elecciones se reduce periodo a periodo, pues en periodos posteriores los puntos se acercan más a la línea de identidad. Sin embargo, como ya se ha mencionado, esto puede deberse únicamente a que los valores elegidos se acercan más al límite inferior del espacio de elección.\\
 
 Para evaluar la consistencia entre las creencias de los participantes y sus números elegidos tomando en cuenta el efecto de suelo, se emplearon dos métodos: el primero de ellos, computa la diferencia normalizada entre las creencias y las elecciones de los participantes de acuerdo con las elecciones promedio observadas en cada periodo (Lahav, 2015); el segundo, calcula la diferencia relativa entre creencias y elecciones a partir del punto medio entre ambos valores (usado por Slonim, 2005, para calcular el cambio relativo de los números elegidos por los jugadores de un periodo al siguiente). A su vez, igual que Lahav, para evaluar el cómputo realizado por los participantes, se utilizaron estos métodos de dos formas,  incluyendo u omitiendo la multiplicación por el parámetro p.\\
 
 El procedimiento sugerido por Lahav (2015) para calcular las diferencias normalizadas entre las creencias y las elecciones de cada participante en cada periodo, fue incorporado a partir de la siguiente ecuación:\\
-$DN〗_i^t=  ((2/3 B_i^t- C_i^t))/▁C_t $
+
+\begin{center}
+$DN_i^t =  \frac{((\frac{2}{3} B_i^t - C_i^t))}{\meanC_t} $
+\end{center}
 
 Donde 〖DN〗_i^t es la Diferencia Normalizada entre creencias y elecciones para cada participante i en el periodo t, computada a partir de la diferencia entre  la media de los números que el participante i estimó que elegirían los otros dos jugadores en el periodo t multiplicado por 2/3,  (〖 2/3 B〗_i^t  ) y el número elegido por el participante i en el periodo t (C_i^t), dividida por el promedio de los números elegidos por todos los participantes en el periodo t (▁C_t).\\
 
