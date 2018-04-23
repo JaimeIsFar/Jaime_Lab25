@@ -1,5 +1,6 @@
 #setwd("D:/APLICACION/EXP2")
-setwd("G:/APLICACION/EXP2")
+#setwd("G:/APLICACION/EXP2")
+setwd("C:/Users/Alejandro/Desktop/Jaime_Lab25/Datos")
 library("grDevices", lib.loc="C:/Program Files/R/R-3.1.1/library")
 
 #### Mean Choices and Individual Beliefs by Period ####
