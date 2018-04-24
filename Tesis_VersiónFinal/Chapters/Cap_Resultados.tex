@@ -270,7 +270,7 @@ Tomando en cuenta dicho resultado, se repitieron las pruebas-T de una cola para 
 
 En la Figura~\ref{fig:ParticipantesA_promedio} se presentan las elecciones promedio de los participantes A y de los participantes no-A (participantes B, C, D y E) en cada periodo jugado. La figura presenta en gráficos diferentes las elecciones promedio computadas cuando se consideran los datos de la sesión 3 (panel izquierdo) y cuando no (panel derecho).\\
   
-\begin{figure}[hp]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.45\textwidth]{Figures/F9_1} & \includegraphics[width=0.45\textwidth]{Figures/F9_2} 
 \decoRule
@@ -538,22 +538,40 @@ En general, los resultados obtenidos en términos de la evaluación de la consis
 
 Finalmente, dado el efecto que la experiencia demostró tener sobre la ejecución de los participantes en juegos repetidos de \textit{p-beauty} contest, tanto en la elección de sus números de acuerdo a la experiencia de otros jugadores, como a la adquisición de consistencia entre sus creencias y elecciones, se valoró una última pregunta de investigación derivada del tipo de datos obtenidos con el diseño propuesto. Dicha pregunta estuvo orientada a evaluar el efecto que pudo haber tenido la experiencia sobre la precisión en la predicción de las elecciones que los jugadores experimentados hacen sobre las elecciones de los otros jugadores.\\
 
-En las Figura~\ref{fig:Precision} se presenta la comparación de las creencias de cada jugador en cada periodo contra los números que de hecho eligieron los otros jugadores. Se observa una alta falta de precisión en los primeros periodos de cada subjuego (periodos 1 y 5). La precisión del participante A (marcado en rojo) parece ser similar a la de los otros participantes.\\
+En las Figuras~\ref{fig:Precision_p} y \ref{fig:Precision_nop} se presenta la comparación de las creencias de cada jugador en cada periodo contra los números que de hecho eligieron los otros jugadores. Se observa una alta falta de precisión en los primeros periodos de cada subjuego (periodos 1 y 5). La precisión del participante A (marcado en rojo) parece ser similar a la de los otros participantes. En la Figura~\ref{fig:Precision_p} se toma en cuenta la multiplicación por p y en la Figura~\ref{fig:Precision_nop}, no.\\
    
 \begin{figure}[hp]
 \centering
-\includegraphics[width=0.45\textwidth]{Figures/F19_1} & \includegraphics[width=0.45\textwidth]{Figures/F19_2} 
-\includegraphics[width=0.45\textwidth]{Figures/F19_3} & \includegraphics[width=0.45\textwidth]{Figures/F19_4} 
-\includegraphics[width=0.45\textwidth]{Figures/F19_5} & \includegraphics[width=0.45\textwidth]{Figures/F19_6} 
-\includegraphics[width=0.45\textwidth]{Figures/F19_7} & \includegraphics[width=0.45\textwidth]{Figures/F19_8} 
-\includegraphics[width=0.45\textwidth]{Figures/F19_9} & \includegraphics[width=0.45\textwidth]{Figures/F19_10} 
-\includegraphics[width=0.45\textwidth]{Figures/F19_11} & \includegraphics[width=0.45\textwidth]{Figures/F19_12} 
-\includegraphics[width=0.45\textwidth]{Figures/F19_13} & \includegraphics[width=0.45\textwidth]{Figures/F19_14} 
-\includegraphics[width=0.45\textwidth]{Figures/F19_15} & \includegraphics[width=0.45\textwidth]{Figures/F19_16} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_1} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_3} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_5} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_7} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_9} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_11} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_13} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_15} 
 \decoRule
-\caption[Precisión en las creencias]{Contraste entre elecciones promedio de los otros jugadores y las creencias promedio de cada jugador. Puntos en rojo señalan al participante A. Los puntos más cercanos a la línea de identidad indican un mayor grado de consistencia.  Las líneas punteadas indican el rango de +/-5 en el que se recompensaban las creencias cercanas a las elecciones. En la columna de la izquierda se incluye la multiplicación por p, mientras que en la derecha se omite.}
-\label{fig:Precision}
+\caption[Precisión en las creencias]{Contraste entre elecciones promedio de los otros jugadores y las creencias promedio de cada jugador. Puntos en rojo señalan al participante A. Los puntos más cercanos a la línea de identidad indican un mayor grado de consistencia.  La multiplicación por p es tomada en cuenta.}
+\label{fig:Precision_p}
 \end{figure}  
+
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=0.45\textwidth]{Figures/F19_2} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_4} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_6} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_8} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_10} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_12} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_14} 
+\includegraphics[width=0.45\textwidth]{Figures/F19_16} 
+\decoRule
+\caption[Precisión en las creencias]{Contraste entre elecciones promedio de los otros jugadores y las creencias promedio de cada jugador. Puntos en rojo señalan al participante A. Los puntos más cercanos a la línea de identidad indican un mayor grado de consistencia.  Las líneas punteadas indican el rango de +/-5 en el que se recompensaban las creencias cercanas a las elecciones.Se omite la multiplicación por p.}
+\label{fig:Precision_nop}
+\end{figure}  
+
+
 
 Se realizó un último conjunto de pruebas-T de dos muestras para comparar el número de veces que los participantes en los subjuegos 1 y 2 lograron acercarse (dentro de un margen de error de $\frac{+}{5}$) a la predicción de los números a elegir por sus oponentes en cada periodo.\\
 

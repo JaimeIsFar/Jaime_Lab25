@@ -1,5 +1,6 @@
 rm(list=ls())
-setwd("C:/Users/Laboratorio25_2/Desktop/Jaime_Lab25/Datos/Regresiones")
+#setwd("C:/Users/Laboratorio25_2/Desktop/Jaime_Lab25/Datos/Regresiones")
+setwd("C:/Users/Alejandro/Desktop/Jaime_Lab25/Datos")
 library("lfe", lib.loc="~/R/win-library/3.4")
 library("lme4", lib.loc="~/R/win-library/3.4")
 library("plm", lib.loc="~/R/win-library/3.4")
