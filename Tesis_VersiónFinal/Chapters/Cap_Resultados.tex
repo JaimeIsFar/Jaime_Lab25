@@ -2,24 +2,20 @@
 \chapter{Resultados} % Main chapter title
 \label{Cap_Res} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-Para el análisis de los resultados obtenidos, se utilizaron tanto pruebas estadísticas bayesianas como pruebas clásicas o frecuentistas. En el presente apartado se presentan únicamente los resultados de los análisis bayesianos, mientras que los resultados de los análisis clásicos se incluyen en los Apéndices. En general, ambas aproximaciones apuntan hacia las mismas conclusiones.\\
-
-\section{Análisis Bayesiano}\\
-
-Se decidió presentar los resultados del análisis bayesiano porque se considera que el factor de Bayes, que funciona como una alternativa al \textit{p-value} como medida de significancia estadística, refleja de forma mucho más clara la  relación entre los datos obtenidos y las hipótesis nula y alternativa, al señalar cuántas veces es más probable que la evidencia haya sido producida bajo la hipótesis alterna respecto a la hipótesis nula ($BF_{10}$), o viceversa ($BF_{01}$).\\
+Para el análisis de los resultados obtenidos, se utilizaron tanto pruebas estadísticas bayesianas como pruebas clásicas o frecuentistas. En el presente apartado se presentan únicamente los resultados de los análisis bayesianos, mientras que los resultados de los análisis clásicos se incluyen en los Apéndices. En general, ambas aproximaciones apuntan hacia las mismas conclusiones. Se decidió presentar los resultados del análisis bayesiano porque se considera que el factor de Bayes, que funciona como una alternativa al \textit{p-value} como medida de significancia estadística, refleja de forma mucho más clara la  relación entre los datos obtenidos y las hipótesis nula y alternativa, al señalar cuántas veces es más probable que la evidencia haya sido producida bajo la hipótesis alterna respecto a la hipótesis nula ($BF_{10}$), o viceversa ($BF_{01}$).
 
 \section{Consistencia entre creencias y elecciones en el primer subjuego}\\
 
-El primer subjuego del presente experimento presenta una replicación parcial del experimento de Lahav, (\citeyear{Lahav}). En ambos casos se juega p-beauty contest por varios periodos y se utiliza un método para explicitar creencias. Las diferencias radican en el número de jugadores (3 en el presente experimento, y hasta 20 en el de Lahav), la cantidad de periodos jugados (4 en el presente experimento y 5 en el de Lahav), y el método utilizado para explicitar las creencias (en el presente experimento se preguntó directamente por el número que se creía elegirían los otros jugadores, mientras que en el experimento de Lahav se estimaba el número de jugadores que elegirían un número dentro de ciertos rangos).\\
+El primer subjuego del presente experimento presenta una replicación parcial del experimento de Lahav, (\citeyear{Lahav}). En ambos casos se juega p-beauty contest por varios periodos y se utiliza un método para explicitar creencias. Las diferencias radican en el número de jugadores (3 en el presente experimento, y hasta 20 en el de Lahav), la cantidad de periodos jugados (4 en el presente experimento y 5 en el de Lahav), y el método utilizado para explicitar las creencias (en el presente experimento se preguntó directamente por el número que se creía elegirían los otros jugadores, mientras que en el experimento de Lahav se estimaba el número de jugadores que elegirían un número dentro de ciertos rangos).
 
-\begin{figure}[hp]
+\begin{figure}[ph]
 \centering
 \includegraphics[width=0.45\textwidth]{Figures/F1_1} & \includegraphics[width=0.45\textwidth]{Figures/F1_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F1_3} & \includegraphics[width=0.45\textwidth]{Figures/F1_4} 
 \includegraphics[width=0.45\textwidth]{Figures/F1_5} & \includegraphics[width=0.45\textwidth]{Figures/F1_6} 
 \includegraphics[width=0.45\textwidth]{Figures/F1_7} & \includegraphics[width=0.45\textwidth]{Figures/F1_8} 
 \decoRule
-\caption[Exploración visual de la consistencia entre creencias y elecciones]{Comparación entre los números elegidos por los participantes y el promedio de las creencias registradas. Los puntos más cercanos a la línea de identidad señalan una mayor consistencia. En las figuras del lado izquierdo las creencias promedio son multiplicadas por $p$ y en el lado derecho se omite dicha operación.}
+\caption[Exploración visual de la consistencia entre creencias y elecciones]{Comparación entre los números elegidos y el promedio de las creencias registradas en cada periodo. Los puntos más cercanos a la línea de identidad señalan una mayor consistencia. En las figuras del lado izquierdo las creencias promedio son multiplicadas por $p$ y en el lado derecho se omite dicha operación.}
 \label{fig:Consistencia}
 \end{figure}
 
@@ -38,7 +34,7 @@ Donde $DN_i^t$ es la Diferencia Normalizada entre las creencias y elecciones de 
 Una vez computadas las diferencias por cada participante y periodo, se calculó el promedio de las mismas para poder someterlas a un análisis estadístico que permitiera evaluar si estas fueron significativamente diferentes de 0. Para ello, se realizaron pruebas t bayesianas de una sola muestra para cada periodo de juego. En la Tabla~\ref{DN-S1-B} se reportan los Factores de Bayes obtenidos en dicho análisis, que permiten estimar qué tantas veces es más probable que la evidencia corresponda con la Hipótesis Alterna (``hay diferencia entre creencias y elecciones'') respecto a la Hipótesis Nula (``no hay diferencia entre creencia y elecciones''). Como puede verse, sólamente se encontraron diferencias significativas entre creencias y elecciones en los primeros dos periodos del juego.\\
 
 \begin{table}[h]
-\caption[Diferencias Normalizadas en el Subjuego 1 (prueba t de una muestra)]{\textbf{Diferencias Normalizadas en el Subjuego 1} Prueba t bayesiana de una sola muestra que compara contra 0 el promedio de las Diferencias Normalizadas entre las creencias y las elecciones de los jugadores en cada periodo del Subjuego 1.}
+\caption[Diferencias Normalizadas en el Subjuego 1 (prueba t de una muestra)]{\textbf{Diferencias Normalizadas en el Subjuego 1} Prueba t bayesiana de una sola muestra que compara contra 0 el promedio de las Diferencias Normalizadas entre creencias y elecciones en el Subjuego 1.}
 \label{DN-S1-B}
 \centering
 \begin{tabular}{l | c c | c}
@@ -54,30 +50,30 @@ Periodo 4 & 0.652 & 0.015 & -0.147\\
 \end{tabular}
 \end{table}
 
-En la Figura~\ref{fig:DN_S1} se presenta de manera gráfica la relación entre las distribuciones prior y posterior computadas en cada periodo. Las distribuciones prior representan la Hipótesis Nula (asume diferencias  cercanas a 0) y las distribuciones posteriores presentan la magnitud de la diferencia estimada a la luz de los datos. La forma más sencilla de interpretar estas figuras es como una razón de densidades de probabilidad: si la densidad de probabilidad es mayor en la distribución prior que en la distribución posterior en el punto de ``no diferencias'' (que señala un tamaño del efecto 0, $\delta = 0$), quiere decir que la evidencia favorece la hipótesis alterna, ya que a la luz de la evidencia es ``\textit{muy poco probable}'' (menos de lo que se esperaba de acuerdo a la distribución prior) que el tamaño de efecto tenga un valor cercano a 0.\\
+En la Figura~\ref{fig:DN_S1} se presenta de manera gráfica la relación entre las distribuciones prior y posterior computadas en cada periodo. Las distribuciones prior representan la Hipótesis Nula (asume diferencias  cercanas a 0) y las distribuciones posteriores presentan la magnitud de la diferencia estimada a la luz de los datos. La forma más sencilla de interpretar estas figuras es como una razón de densidades de probabilidad: si la densidad de probabilidad es mayor en la distribución prior que en la distribución posterior en el punto de "no diferencias" (que señala un tamaño del efecto 0, $\delta = 0$), quiere decir que la evidencia favorece la hipótesis alterna, ya que a la luz de la evidencia es "\textit{muy poco probable}"" (menos de lo que se esperaba de acuerdo a la distribución prior) que el tamaño de efecto tenga un valor cercano a 0.\\
   
-\begin{figure}[hp]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.45\textwidth]{Figures/F2_1} & \includegraphics[width=0.45\textwidth]{Figures/F2_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F2_3} & \includegraphics[width=0.45\textwidth]{Figures/F2_4} 
 \decoRule
-\caption[Diferencias Normalizadas entre creencias y elecciones en el Subjuegoo 1 (Factor de Bayes)]{Para la evaluación con pruebas t de una muestra de las Diferencias Normalizadas entre las creencias y las elecciones registradas en los cuatro periodos del Subjuego 1, se presenta la relación entre las distribuciones prior y posteriores computadas por cada periodo. La razón de probabilidad entre estas distribuciones en el punto $\delta = 0$ señala qué tan probable es que no hayan diferencias según los datos recabados (la distribución posterior), en comparación con la hipótesis nula (la distribución prior).}
+\caption[Diferencias Normalizadas entre creencias y elecciones en el Subjuegoo 1 (Factor de Bayes)]{Para la evaluación con pruebas t de una muestra de las Diferencias Normalizadas entre las creencias y las elecciones registradas el Subjuego 1, se presenta la relación entre las distribuciones prior y posteriores computadas por cada periodo. La razón de probabilidad entre estas distribuciones en el punto $\delta = 0$ señala qué tan probable es que no hayan diferencias según los datos recabados (la distribución posterior), en comparación con la hipótesis nula (la distribución prior).}
 \label{fig:DN_S1}
 \end{figure}
 
 Estos resultados son consistentes con lo que reporta Lahav (\citeyear{Lahav}): en los primeros periodos no hay consistencia entre las creencias y elecciones, pero ésta parece adquirirse conforme avanzan los periodos. Así mismo, en todos los periodos se encontraron diferencias negativas, sugiriendo que en promedio las creencias de los participantes estuvieron por debajo de sus elecciones reales.\\
 
-En el estudio presentado por Lahav (\citeyear{Lahav}), el cómputo de la Diferencia Normalizada entre las creencias y las elecciones se realizó también omitiendo la multiplicación de las creencias por $p$, en un intento por evaluar la posibilidad de que las inconsistencias halladas entre éstas y las elecciones se deban a que los participantes no habían considerado dicha operación. El presente trabajo también incorporó dicha variación del análisis, llevada a cabo de acuerdo a la siguiente ecuación, en la que se omite la multiplicación por $\frac{2}{3}$ en $B_i^t$:\\
+En el estudio presentado por Lahav (\citeyear{Lahav}), el cómputo de la Diferencia Normalizada entre las creencias y las elecciones se realizó también omitiendo la multiplicación de las creencias por $p$, en un intento por evaluar la posibilidad de que las inconsistencias halladas entre éstas y las elecciones se deban a que los participantes no habían considerado dicha operación. El presente trabajo también incorporó dicha variación del análisis, llevada a cabo de acuerdo a la siguiente ecuación, en la que se omite la multiplicación por $\frac{2}{3}$ en $B_i^t$:
 
 \begin{center}
-$DN_i^t=  \frac{(B_i^t- C_i^t)}/{\overline{C}_t}$ \\
+$DN_i^t =  \frac{(B_i^t - C_i^t)}{\overline{C}_t} $ \\
 \end{center}
 
 Nuevamente, las diferencias promedio computadas en cada periodo asumiendo que los participantes no multiplicaron sus creencias por $p$, fueron evaluadas con pruebas t bayesianas de una sola muestra.  Este análisis arrojó resultados inversos a los encontrados cuando la multiplicación por $p$ fue tomada en cuenta: los primeros periodos no muestran diferencias significativas y los últimos, sí.  Aunado a ello, las diferencias en los periodos 3 y 4 se vuelven positivas (indicando que las creencias cayeron por encima de las elecciones). Estos resultados se presentan en la Tabla~\ref{DNnop-S1-B}.\\
 
 
 \begin{table}[h]
-\caption[Diferencias Normalizadas en el Subjuego 1, omitiendo la multiplicación por $p$ (prueba t de una muestra)]{\textbf{Diferencias Normalizadas en el Subjuego 1 omitiendo la multiplicación por p:} Prueba t bayesiana de una sola muestra que compara contra 0 el promedio de las Diferencias Normalizadas entre las creencias (omitiendo la multiplicación por $p$) y las elecciones de los jugadores en cada periodo del Subjuego 1.}
+\caption[Diferencias Normalizadas en el Subjuego 1, omitiendo la multiplicación por $p$ (prueba t de una muestra)]{\textbf{Diferencias Normalizadas en el Subjuego 1 omitiendo la multiplicación por p:} Prueba t bayesiana de una sola muestra que compara contra 0 el promedio de las Diferencias Normalizadas entre las creencias (sin multiplicar por $p$) y las elecciones de los jugadores en el Subjuego 1.}
 \label{DNnop-S1-B}
 \centering
 \begin{tabular}{l | c c | c}
@@ -93,32 +89,32 @@ Periodo 4 & 1.861 & 4.032e^-4 & 0.280\\
 \end{tabular}
 \end{table}
 
-De acuerdo con el Factor de Bayes, aunque la Hipótesis Alterna es más probable en los periodos 3 y 4 (es decir, que sí hay diferencias entre las creencias y las elecciones) respecto de la Hipótesis Nula, la evidencia acumulada es relativamente pequeña, (particularmente en el periodo 4, donde podría considerarse anecdótica). En la Figura~\ref{fig:DNnop_S1} se muestra la relación entre las distribuciones prior y posteriores computadas por cada periodo.\\
-
-\begin{figure}[hp]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.45\textwidth]{Figures/F3_1} & \includegraphics[width=0.45\textwidth]{Figures/F3_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F3_3} & \includegraphics[width=0.45\textwidth]{Figures/F3_4} 
 \decoRule
-\caption[Diferencias Normalizadas entre creencias y elecciones en el Subjuegoo 1, omitiendo la multiplicación por $p$ (Factor de Bayes)]{Para la evaluación con pruebas t de una muestra de las Diferencias Normalizadas entre las creencias (omitiendo la multiplicación por $p$) y las elecciones registradas en los cuatro periodos del Subjuego 1, se ilustra la relación entre las distribuciones prior y posteriores computadas por cada periodo. La razón de probabilidades en el punto $\delta = 0$ indica qué tan probable es, a la luz de los datos (la distribución posterior), que no hayan diferencias en comparación con lo que nuestra Hipótesis Nula supondría.}
+\caption[Diferencias Normalizadas entre creencias y elecciones en el Subjuegoo 1, omitiendo la multiplicación por $p$ (Factor de Bayes)]{Para la evaluación con pruebas t de una muestra de las Diferencias Normalizadas entre creencias (sin multiplicar por $p$) y elecciones en el Subjuego 1, se ilustra la relación entre las distribuciones prior y posteriores computadas por cada periodo.}
 \label{fig:DNnop_S1}
 \end{figure}
+
+De acuerdo con el Factor de Bayes, aunque la Hipótesis Alterna es más probable en los periodos 3 y 4 (es decir, que sí hay diferencias entre las creencias y las elecciones) respecto de la Hipótesis Nula, la evidencia acumulada es relativamente pequeña, (particularmente en el periodo 4, donde podría considerarse anecdótica). En la Figura~\ref{fig:DNnop_S1} se muestra la relación entre las distribuciones prior y posteriores computadas por cada periodo.\\
 
 Este resultado difiere considerablemente de los hallazgos reportados por Lahav (\citeyear{Lahav}), quien reportó que al excluir la multiplicación por $\frac{2}{3}$, las diferencias en los cuatro periodos se volvieron positivas, significativamente diferentes de 0, y en general, más grandes que cuando la multiplicación por $p$ era tomada en cuenta. En el estudio conducido por Lahav, dichos resultados fueron interpretados como un indicador de que los participantes sí toman en cuenta la multiplicación por $p$.\\
 
 Cuando se incluye la multiplicación por $p$ en el cálculo de las Diferencias Normalizadas entre creencias y elecciones en el presente estudio, se encuentra que éstas fueron significativas en los primeros periodos, y al excluir dicha multiplicación, las diferencias significativas aparecen sólo en los últimos periodos, aunque la evidencia parece ser débil. Estos resultados podrían estar sugiriendo que los participantes comienzan el juego sin considerar la multiplicación por $\frac{2}{3}$, pero la incorporan en sus decisiones al avanzar en los periodos (o por lo menos, aprenden que el número objetivo siempre está por debajo del número promedio).\\
 
-En general, a pesar de las diferencias en los métodos empleados para la elicitación de creencias, el presente estudio presenta hallazgos similares a los reportados por Lahav (\citeyear{Lahav}), al emplear el método propuesto para calcular las Diferencias Normalizadas entre las creencias y las elecciones de los participantes:\\
+En general, a pesar de las diferencias en los métodos empleados para la elicitación de creencias, el presente estudio presenta hallazgos similares a los reportados por Lahav (\citeyear{Lahav}), al emplear el método propuesto para calcular las Diferencias Normalizadas entre las creencias y las elecciones de los participantes:
 
 \begin{itemize}
 \item Existen discrepancias entre las creencias y las elecciones de los participantes en los primeros periodos de juego, pero no en los últimos.\\
 
-\item Las elecciones de los participantes suelen encontrarse entre el promedio de sus creencias respecto de los otros jugadores y el número objetivo computado de acuerdo a su multiplicación por $p$.\\
+\item Las elecciones de los participantes suelen encontrarse entre el promedio de sus creencias respecto de los otros jugadores y el número objetivo computado de acuerdo a su multiplicación por $p$.
 \end{itemize}
 
 La diferencia más importante entre lo hallado en el presente estudio y lo reportado por Lahav (\citeyear{Lahav}), es que, en promedio, los participantes no parecen incorporar la multiplicación por $\frac{2}{3}$ en su elección, al menos en los primeros periodos.\\
 
-Además de replicar el método de Diferencias Normalizadas utilizado por Lahav (\citeyear{Lahav}), las diferencias entre creencias y elecciones fueron evaluadas con un segundo método que no dependía de la elección promedio de todos los participantes en cada periodo para ponderarlas. La medida utilizada fue la Diferencia Relativa entre las creencias y elecciones de cada participante $i$ en cada periodo $t$, calculada de la siguiente manera:\\
+Además de replicar el método de Diferencias Normalizadas utilizado por Lahav (\citeyear{Lahav}), las diferencias entre creencias y elecciones fueron evaluadas con un segundo método que no dependía de la elección promedio de todos los participantes en cada periodo para ponderarlas. La medida utilizada fue la Diferencia Relativa entre las creencias y elecciones de cada participante $i$ en cada periodo $t$, calculada de la siguiente manera:
 
 \begin{center}
 $DR_i^t =  \frac{(\frac{2}{3}B_i^t- C_i^t)}{0.5(\frac{2}{3}B_i^t + C_i^t)}$\\
@@ -128,7 +124,7 @@ Las Diferencias Relativas promedio computadas por cada periodo fueron evaluadas 
 
 
 \begin{table}[h]
-\caption[Diferencias Relativas en el Subjuego 1 (prueba t de una muestra)]{\textbf{Diferencias Relativas en el Subjuego 1} Prueba t bayesiana de una sola muestra que compara contra 0 el promedio de las Diferencias Relativas computadas entre las creencias y las elecciones de los jugadores en cada periodo del Subjuego 1.}
+\caption[Diferencias Relativas en el Subjuego 1 (prueba t de una muestra)]{\textbf{Diferencias Relativas en el Subjuego 1} Prueba t bayesiana de una sola muestra que compara contra 0 el promedio de las Diferencias Relativas computadas entre creencias y elecciones en el Subjuego 1.}
 \label{DR-S1-B}
 \centering
 \begin{tabular}{l | c c | c}
@@ -144,20 +140,18 @@ Periodo 4 & 1.871 & 4.022e^-6 & -0.212\\
 \end{tabular}
 \end{table}
 	
-
-
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.45\textwidth]{Figures/F4_1} & \includegraphics[width=0.45\textwidth]{Figures/F4_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F4_3} & \includegraphics[width=0.45\textwidth]{Figures/F4_4} 
 \decoRule
-\caption[Diferencias Relativas entre creencias y elecciones en el Subjuego 1 (Factor de Bayes)]{Para la evaluación con pruebas t de una muestra de las Diferencias Relativas encontradas entre las creencias y las elecciones de los participantes a lo largo del Subjuego 1, se presenta la razón de probabilidades en el punto $\delta = 0$ que indica si a la luz de los datos (la distribución posterior) es más o menos probable (y qué tanto) que no hayan diferencias entre estas, de lo que supondría la Hipótesis Nula.}
+\caption[Diferencias Relativas entre creencias y elecciones en el Subjuego 1 (Factor de Bayes)]{Para las pruebas t de una muestra que evalúan las Diferencias Relativas computadas entre creencias y elecciones en el Subjuego 1, se presenta la razón de probabilidades en el punto $\delta = 0$ entre las distribuciones prior y posterior computadas por periodo.}
 \label{fig:DR_S1}
 \end{figure}
 
 Tal y como se encontró con el método de Diferencias Normalizadas, todas las diferencias son negativas, indicando que consistentemente las creencias estuvieron por debajo de las elecciones reales. Sin embargo, contrario a lo que se esperaría con base en los resultados hallados con el método de Diferencias Normalizadas, donde los participantes reducen la inconsistencia entre sus elecciones y las creencias explicitadas conforme adquieren experiencia, con el método de Diferencias Relativas se observan inconsistencias (diferencias estadísticamente significativas) entre creencias y elecciones en el periodo 4, aunque no en el periodo 3. De cualquier forma, de acuerdo con el Factor de Bayes, la evidencia a favor de la hipótesis alterna en el periodo 4 es anecdótica.\\
 
-Posteriormente, se computaron las Diferencias Relativas omitiendo la multiplicación por $p$, de acuerdo con la siguiente ecuación:\\
+Posteriormente, se computaron las Diferencias Relativas omitiendo la multiplicación por $p$, de acuerdo con la siguiente ecuación:
 
 \begin{center}
 $DR_i^t=  \frac{(B_i^t- C_i^t)}{0.5(B_i^t+ C_i^t)}$
@@ -167,7 +161,7 @@ Se realizaron pruebas t de una sola muestra para determinar si las Diferencias R
 
 
 \begin{table}[h]
-\caption[Diferencias Relativas en el Subjuego 1, omitiendo la multiplicación por $p$ (prueba t de una muestra)]{\textbf{Diferencias Relativas en el Subjuego 1 omitiendo la multiplicación por p} Prueba t bayesiana de una sola muestra que compara contra 0 el promedio de las Diferencias Relativas entre las creencias y las elecciones de los jugadores en cada periodo Subjuego 1, cuando se omite la multiplicación de las creencias por $p$.}
+\caption[Diferencias Relativas en el Subjuego 1, omitiendo la multiplicación por $p$ (prueba t de una muestra)]{\textbf{Diferencias Relativas en el Subjuego 1 sin la multiplicación por p} Prueba t bayesiana de una sola muestra que compara contra 0 el promedio de las Diferencias Relativas entre las creencias y las elecciones de los jugadores en el Subjuego 1, cuando las creencias no son multiplicadas por $p$.}
 \label{DRnop-S1-B}
 \centering
 \begin{tabular}{l | c c | c}
@@ -189,7 +183,7 @@ Periodo 4 & 0.810 & 5.669e^-6 & 0.167\\
 \includegraphics[width=0.45\textwidth]{Figures/F5_1} & \includegraphics[width=0.45\textwidth]{Figures/F5_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F5_3} & \includegraphics[width=0.45\textwidth]{Figures/F5_4} 
 \decoRule
-\caption[Diferencias Relativas entre creencias y elecciones en el Subjuego 1 sin la multiplicación por p (Factor de Bayes)]{Para la evaluación con pruebas t de una muestra de las Diferencias Relativas encontradas entre las creencias (sin multiplicar por $p$) y las elecciones de los participantes a lo largo del Subjuego 1, se señala la razón de probabilidades en el punto $\delta = 0$ que indica si a la luz de los datos (la distribución posterior) es más o menos probable que no hayan diferencias entre estas, de lo que supondría la Hipótesis Nula.}
+\caption[Diferencias Relativas entre creencias y elecciones en el Subjuego 1 sin la multiplicación por p (Factor de Bayes)]{Para la evaluación con pruebas t de una muestra de las Diferencias Relativas encontradas entre las creencias (sin multiplicar por $p$) y las elecciones de los participantes en el Subjuego 1, se señala la razón de probabilidades en el punto $\delta = 0$ entre las distribuciones prior y posterior.}
 \label{fig:DRnop_S1}
 \end{figure}
 
@@ -211,14 +205,14 @@ En la Figura~\ref{fig:Reset_cambios} se muestran los cambios en las elecciones r
 \includegraphics[width=0.45\textwidth]{Figures/F6_1} & \includegraphics[width=0.45\textwidth]{Figures/F6_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F6_3} & \includegraphics[width=0.45\textwidth]{Figures/F6_4} 
 \decoRule
-\caption[Elecciones registradas en ensayos consecutivos]{Se presenta la relación entre los números elegidos en periodos consecutivos por los participantes A, quienes no sólo jugaron los cuatro periodos del Subjuego 1, sino que permanecieron a lo largo del Subjuego 2. En los primeros tres páneles se aprecia que en el Subjuego 1 las elecciones tendían a disminuir, mientras que en el último panel, se observa un incremento en las mismas (el Efecto Reset).}
+\caption[Elecciones registradas en ensayos consecutivos]{Se presenta la relación entre los números elegidos en periodos consecutivos por los participantes A, quienes jugaron los cuatro periodos del Subjuego 1 y permanecieron a lo largo del Subjuego 2. En los primeros tres páneles se aprecia que en el Subjuego 1 las elecciones tendían a disminuir, mientras que en el último panel, se observa un incremento en las mismas (el Efecto Reset).}
 \label{fig:Reset_cambios}
 \end{figure}
 
 Se realizó una prueba Binomial bayesiana de una cola para comparar contra el azar la proporción de participantes A que aumentaban o disminuían sus elecciones entre cada uno de los primeros cinco periodos que jugaron (ver Tabla~\ref{Binom_Reset}), encontrando evidencia anecdótica. La falta de robustez en los resultados obtenidos en esta prueba puede deberse a que sólamente se realizaron 10 sesiones experimentales.\\
 
 \begin{table}[h]
-\caption[Prueba binomial bayesiana para evaluar la proporción de casos en que los participantes A aumentan y reducen su número elegido]{\textbf{Cambios en los números elegidos en periodos consecutivos} Prueba binomial bayesiana que compara contra el azar el número de veces que el número elegido en periodos consecutivos aumentaba o disminuía.}
+\caption[Prueba binomial bayesiana para evaluar la proporción de casos en que los participantes A aumentan y reducen su número elegido]{\textbf{Cambios en los números elegidos en periodos consecutivos} Prueba binomial bayesiana que compara contra el azar el número de veces que los participantes A aumentaron o disminuyeron sus números elegidos en periodos consecutivos.}
 \label{Binom_Reset}
 \centering
 \begin{tabular}{l c | c c | c}
@@ -252,7 +246,7 @@ En la Figura~\ref{fig:Elecciones_ParticipantesA} se presentan las elecciones de 
 \includegraphics[width=0.45\textwidth]{Figures/F7_7} & \includegraphics[width=0.45\textwidth]{Figures/F7_8} 
 \includegraphics[width=0.45\textwidth]{Figures/F7_9} & \includegraphics[width=0.45\textwidth]{Figures/F7_10} 
 \decoRule
-\caption[Elecciones de todos los participantes]{Se presentan todas elecciones registradas en cada sesión experimental. Se puede apreciar que el participante A de la sesión 3 tiene un patrón atípico respecto del resto de las sesiones y de lo que se esperaría de acuerdo a la literatura.}
+\caption[Elecciones de todos los participantes]{Se presentan todas las elecciones registradas en cada sesión experimental. Se puede apreciar que el participante A de la sesión 3 tiene un patrón atípico respecto del resto de las sesiones.}
 \label{fig:Elecciones_ParticipantesA}
 \end{figure}  
   
@@ -262,7 +256,7 @@ Para evaluar qué tan saliente es la tirada del participante A de la sesión 3 e
 \centering
 \includegraphics[width=0.45\textwidth]{Figures/F8_1} & \includegraphics[width=0.45\textwidth]{Figures/F8_2} 
 \decoRule
-\caption[Participante atípico: Comparando el desempeño del Participante A de la Sesión 3]{Contraste entre el Participante A de la Sesión 3 y el resto de los Participantes A. Del lado izquiero se presenta un diagrama de caja y bigotes, donde se puede apreciar que en la Sesión 3 se observa un desempeño muy alejado del resto. Del lado derecho, se muestra un diagrama de violín que complementa esta información con un diagrama de densidad.}
+\caption[Participante atípico: Comparando el desempeño del Participante A de la Sesión 3]{Contraste entre el Participante A de la Sesión 3 y el resto de los Participantes A. Del lado izquiero se presenta un diagrama de caja y bigotes y del lado derecho, un diagrama de violín que complementa esta información con un diagrama de densidad.}
 \label{fig:Boxplot}
 \end{figure}  
 
@@ -274,7 +268,7 @@ En la Figura~\ref{fig:ParticipantesA_promedio} se presenta el promedio de los n�
 \centering
 \includegraphics[width=0.45\textwidth]{Figures/F9_1} & \includegraphics[width=0.45\textwidth]{Figures/F9_2} 
 \decoRule
-\caption[Promedio de los números elegidos por los participantes A y no-A en cada uno de los periodos jugados]{Se presenta el promedio de los números elegidos en cada uno de los periodos jugados por los participantes A (en color rojo) y los participantes B y C en el Subjuego 1 y D y E en el Subjuego 2 (en color azul). La gráfica de la izquierda incorpora los datos obtenidos en la Sesión 3 y la gráfica de la derecha, no.}
+\caption[Promedio de los números elegidos por los participantes A y no-A en cada uno de los periodos jugados]{Se presenta el promedio de los números elegidos en cada uno de los periodos jugados por los participantes A (en color rojo) y los participantes B y C en el Subjuego 1, y D y E en el Subjuego 2 (en color azul). La gráfica de la izquierda incorpora los datos obtenidos en la Sesión 3 y la gráfica de la derecha, no.}
 \label{fig:ParticipantesA_promedio}
 \end{figure}  
 
@@ -284,9 +278,7 @@ Con base en estos resultados, se puede afirmar que se logró replicar el efecto 
 
 Las creencias y elecciones de los participantes en el Subjuego 2 fueron sometidos a los mismos análisis reportados para el Subjuego 1 en la \textbf{sección 4.2}: se computaron las Diferencias Normalizadas y las Diferencias Relativas, incluyendo y excluyendo la multiplicación por $p$. Pero en esta ocasión, se hizo una distinción entre la ejecución de los jugadores con experiencia (participantes A) y los jugadores que participaban en el juego por primera vez (participantes D y E).\\
 
-En la figura~\ref{fig:Consistencia_promedio} se contrasta la elección de cada participante con su creencia promedio en cada uno de los periodos del subjuego 2, cuando se incluye la multiplicación por $p$ y cuando esta se omite. Los participantes A están marcados en rojo. En general, se observa que estos participantes fueron más consistentes en sus creencias y elecciones comparados con los participantes D y E.\\
-
-\begin{figure}[hp]
+\begin{figure}[ph]
 \centering
 \includegraphics[width=0.45\textwidth]{Figures/F10_1} & \includegraphics[width=0.45\textwidth]{Figures/F10_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F10_3} & \includegraphics[width=0.45\textwidth]{Figures/F10_4} 
@@ -297,9 +289,9 @@ En la figura~\ref{fig:Consistencia_promedio} se contrasta la elección de cada p
 \label{fig:Consistencia_promedio}
 \end{figure}  
 
-Se calculó la Diferencia Normalizada entre las creencias y elecciones registradas en cada periodo del Subjuego 2, por los participantes A y los participantes D y E. Posteriormente,  se realizaron pruebas t bayesianas para determinar si estas diferencias fueron estadísticamente diferentes de 0.\\
+En la Figura~\ref{fig:Consistencia_promedio} se contrasta la elección de cada participante con su creencia promedio en cada uno de los periodos del subjuego 2, cuando se incluye la multiplicación por $p$ y cuando esta se omite. Los participantes A están marcados en rojo. En general, se observa que estos participantes fueron más consistentes en sus creencias y elecciones comparados con los participantes D y E.\\
 
-En las Tablas~\ref{DN-S2-A-B} y \ref{DN-S2-DyE-B} se presentan los resultados obtenidos en las pruebas t bayesianas de una sola muestra que evalúan el promedio de las Diferencias Normalizadas computadas entre creencias y elecciones contra 0. De acuerdo con la Tabla~\ref{DN-S2-A-B}, los participantes A no mostraron diferencias significativas (el factor de Bayes en este caso indica qué tantas veces es más probable que no haya diferencias), lo que indica una mayor consistencia entre sus creencias y elecciones en todos los periodos del Subjuego 2. En contraste, en la Tabla~\ref{DN-S2-DyE-B} se puede observar que los participantes D y E mostraron diferencias significativas en los primeros tres periodos del subjuego, y sólo parecieron  adquirir consistencia entre sus creencias y elecciones en el último periodo. Este último resultado es muy similar a lo reportado en los participantes del Subjuego 1, donde todos los jugadores compartían el mismo nivel de experiencia. Además, en todos los casos, las creencias estuvieron por debajo de las elecciones reales. En las Figuras~\ref{fig:DN_S2_A} y \ref{fig:DN_S2_DyE} se incluyen las distribuciones prior y posterior de las Diferencias Normalizadas por periodo para los participantes A y los participantes D y E, respectivamente.\\ 
+Se calculó la Diferencia Normalizada entre las creencias y elecciones registradas en cada periodo del Subjuego 2, por los participantes A y los participantes D y E. Posteriormente,  se realizaron pruebas t bayesianas para determinar si estas diferencias fueron estadísticamente diferentes de 0.
 
 \begin{table}[h]
 \caption[Diferencias Normalizadas en el Subjuego 2; Participante A (Pruebas t de una muestra)]{\textbf{Diferencias Normalizadas en el Subjuego 2 (Participantes A)} Se presentan los resultados de una prueba t de una muestra que compara contra 0 las Diferencias Normalizadas computadas para los participantes A en el Subjuego 2}
@@ -336,12 +328,14 @@ Periodo 8 & 4.002 & 0.022 & -0.047\\
 \end{table}
   
 
+En las Tablas~\ref{DN-S2-A-B} y \ref{DN-S2-DyE-B} se presentan los resultados obtenidos en las pruebas t bayesianas de una sola muestra que evalúan el promedio de las Diferencias Normalizadas computadas entre creencias y elecciones contra 0. De acuerdo con la Tabla~\ref{DN-S2-A-B}, los participantes A no mostraron diferencias significativas (el factor de Bayes en este caso indica qué tantas veces es más probable que no haya diferencias), lo que indica una mayor consistencia entre sus creencias y elecciones en todos los periodos del Subjuego 2. En contraste, en la Tabla~\ref{DN-S2-DyE-B} se puede observar que los participantes D y E mostraron diferencias significativas en los primeros tres periodos del subjuego, y sólo parecieron  adquirir consistencia entre sus creencias y elecciones en el último periodo. Este último resultado es muy similar a lo reportado en los participantes del Subjuego 1, donde todos los jugadores compartían el mismo nivel de experiencia. Además, en todos los casos, las creencias estuvieron por debajo de las elecciones reales. En las Figuras~\ref{fig:DN_S2_A} y \ref{fig:DN_S2_DyE} se incluyen las distribuciones prior y posterior de las Diferencias Normalizadas por periodo para los participantes A y los participantes D y E, respectivamente.\\ 
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.45\textwidth]{Figures/F11_1} & \includegraphics[width=0.45\textwidth]{Figures/F11_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F11_3} & \includegraphics[width=0.45\textwidth]{Figures/F11_4} 
 \decoRule
-\caption[Evaluación de las Diferencias Normalizadas entre creencias y elecciones en los participantes A en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Normalizadas computadas entre las creencias y las elecciones de los participantes A en el Subjuego 2, se presenta la comparación entre las densidades de probabilidad de las distribuciones prior (hipótesis nula) y posterior (hipótesis alterna) computadas por cada periodo, en el punto de no diferencias ($\delta = 0$).}
+\caption[Evaluación de las Diferencias Normalizadas entre creencias y elecciones en los participantes A en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Normalizadas computadas para los participantes A en el Subjuego 2, se presenta la comparación entre las distribuciones prior y posterior computadas por cada periodo, en el punto de no diferencias ($\delta = 0$).}
 \label{fig:DN_S2_A}
 \end{figure}  
 
@@ -351,13 +345,11 @@ Periodo 8 & 4.002 & 0.022 & -0.047\\
 \includegraphics[width=0.45\textwidth]{Figures/F12_1} & \includegraphics[width=0.45\textwidth]{Figures/F12_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F12_3} & \includegraphics[width=0.45\textwidth]{Figures/F12_4} 
 \decoRule
-\caption[Evaluación de las Diferencias Normalizadas entre creencias y elecciones en los participantes D y E en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Normalizadas computadas entre las creencias y las elecciones de los participantes D y E en el Subjuego 2, se presenta la comparación entre las densidades de probabilidad de las distribuciones prior (hipótesis nula) y posterior (hipótesis alterna) computadas por cada periodo, en el punto de no diferencia ($\delta = 0$).}
+\caption[Evaluación de las Diferencias Normalizadas entre creencias y elecciones en los participantes D y E en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Normalizadas computadas para los participantes D y E en el Subjuego 2, se presenta la comparación entre las densidades de probabilidad de las distribuciones prior y posterior computadas por periodo, en el punto de no diferencias.}
 \label{fig:DN_S2_DyE}
 \end{figure}  
 
 Se repitió el cálculo de las Diferencias Normalizadas en los cuatro periodos del Subjuego 2 omitiendo la multiplicación por $p$, con el propósito de evaluar si los jugadores tomaron en cuenta este cálculo en la elección de su número. Tras la realización de las pruebas t bayesianas de una sola muestra correspondientes,  sólo se encontraron diferencias significativas entre las elecciones y las creencias de los participantes A en los dos primeros  periodos, (ver Tabla~\ref{DNnop-S2-A-B}). En general, la magnitud de las diferencias parece ser mayor en todos los periodos cuando se excluye la multiplicación por $p$ que cuando esta sí se incluye. Este resultado sugiere que los jugadores con experiencia previa sí tomaron en cuenta la multiplicación por $p$, o por lo menos, que aprendieron desde el Subjuego 1 que el número objetivo siempre está por debajo del promedio de los números elegidos.\\
-
-Por otra parte, en el caso de los participantes sin experiencia (D y E) solo se encontraron diferencias significativas respecto de 0 en el último periodo (ver Tabla~\ref{DNnop-S2-DyE-B}), resultado que coincide con lo reportado en el Subjuego 1, sugiriendo nuevamente que los participantes incorporaron la multiplicación por $p$ (o comprendieron la tendencia del juego hacia el equilibrio)  sólo después de varias repeticiones. Así mismo, en las Figuras~\ref{fig:DNnop_S2_A} y \ref{fig:DNnop_S2_DyE} se presentan las distribuciones prior y posterior computadas con las pruebas t realizadas por cada periodo, para los participantes con y sin experiencia, respectivamente.\\
 
 \begin{table}[h]
 \caption[Diferencias Normalizadas en el Subjuego 2 omitiendo la multiplicación por $p$; Participante A (Pruebas t de una muestra)]{\textbf{Diferencias Normalizadas en el Subjuego 2 (Participantes A)} Se presentan los resultados de una prueba t de una muestra que compara contra 0 las Diferencias Normalizadas computadas para los participantes A en el Subjuego 2, cuando las creencias registradas no son multiplicadas por $p$.}
@@ -376,6 +368,7 @@ Periodo 8 & 0.643 & 0.003 & 0.438\\
 \end{tabular}
 \end{table}
 
+Por otra parte, en el caso de los participantes sin experiencia (D y E) solo se encontraron diferencias significativas respecto de 0 en el último periodo (ver Tabla~\ref{DNnop-S2-DyE-B}), resultado que coincide con lo reportado en el Subjuego 1, sugiriendo nuevamente que los participantes incorporaron la multiplicación por $p$ (o comprendieron la tendencia del juego hacia el equilibrio)  sólo después de varias repeticiones. Así mismo, en las Figuras~\ref{fig:DNnop_S2_A} y \ref{fig:DNnop_S2_DyE} se presentan las distribuciones prior y posterior computadas con las pruebas t realizadas por cada periodo, para los participantes con y sin experiencia, respectivamente.\\
 
 \begin{table}[h]
 \caption[Diferencias Normalizadas en el Subjuego 2, omitiendo la multiplicación por $p$; Participantes D y E (Pruebas t de una muestra)]{\textbf{Diferencias Normalizadas en el Subjuego 2 (Participantes D y E)} Se presentan los resultados de una prueba t de una muestra que compara contra 0 las Diferencias Normalizadas computadas para los participantes D y E en el Subjuego 2, cuando las creencias registradas no se multiplican por $p$.}
@@ -393,14 +386,14 @@ Periodo 8 & 0.115 & 7.221e^-4 & 0.440\\
 \bottomrule
 \end{tabular}
 \end{table}
-  
+ 
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.45\textwidth]{Figures/F13_1} & \includegraphics[width=0.45\textwidth]{Figures/F13_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F13_3} & \includegraphics[width=0.45\textwidth]{Figures/F13_4} 
 \decoRule
-\caption[Evaluación de las Diferencias Normalizadas entre creencias (sin multiplicar por $p$) y elecciones en los participantes A en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Normalizadas computadas entre las creencias (omitiendo la multiplicación por $p$) y las elecciones de los participantes A en el Subjuego 2, se presenta la comparación entre las densidades de probabilidad de las distribuciones prior (hipótesis nula) y posterior (hipótesis alterna) computadas por cada periodo, en el punto de no diferencia ($\delta = 0$).}
+\caption[Evaluación de las Diferencias Normalizadas entre creencias (sin multiplicar por $p$) y elecciones en los participantes A en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Normalizadas computadas sin la multiplicación por $p$ para los participantes A en el Subjuego 2, se presenta la comparación entre las densidades de probabilidad de las distribuciones prior y posterior en el punto $\delta = 0$.}
 \label{fig:DNnop_S2_A}
 \end{figure}  
 
@@ -410,7 +403,7 @@ Periodo 8 & 0.115 & 7.221e^-4 & 0.440\\
 \includegraphics[width=0.45\textwidth]{Figures/F14_1} & \includegraphics[width=0.45\textwidth]{Figures/F14_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F14_3} & \includegraphics[width=0.45\textwidth]{Figures/F14_4} 
 \decoRule
-\caption[Evaluación de las Diferencias Normalizadas entre creencias y elecciones en los participantes D y E en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Normalizadas computadas entre las creencias no multiplicadas por $p$ y las elecciones de los participantes D y E en el Subjuego 2, se presenta la comparación entre las densidades de probabilidad de las distribuciones prior (hipótesis nula) y posterior (hipótesis alterna) computadas por cada periodo, en el punto de no diferencia ($\delta = 0$).}
+\caption[Evaluación de las Diferencias Normalizadas entre creencias y elecciones en los participantes D y E en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Normalizadas computadas sin la multiplicación por $p$ para los participantes D y E en el Subjuego 2, se presenta la comparación entre las distribuciones prior y posterior computadas por periodo, en el punto $\delta = 0$.}
 \label{fig:DNnop_S2_DyE}
 \end{figure}  
 
@@ -457,7 +450,7 @@ Periodo 8 & 4.295 & 0.022 & -0.007\\
 \includegraphics[width=0.45\textwidth]{Figures/F11_1} & \includegraphics[width=0.45\textwidth]{Figures/F11_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F11_3} & \includegraphics[width=0.45\textwidth]{Figures/F11_4} 
 \decoRule
-\caption[Evaluación de las Diferencias Relativas entre creencias y elecciones en los participantes A en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Relativas computadas entre las creencias y las elecciones de los participantes A en el Subjuego 2, se presenta la comparación entre las densidades de probabilidad de las distribuciones prior (hipótesis nula) y posterior (hipótesis alterna) computadas por cada periodo, en el punto de no diferencia ($\delta = 0$).}
+\caption[Evaluación de las Diferencias Relativas entre creencias y elecciones en los participantes A en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Relativas computadas para los participantes A en el Subjuego 2, se presenta la comparación entre las distribuciones prior y posterior computadas por periodo, en el punto $\delta = 0$.}
 \label{fig:DR_S2_A}
 \end{figure}  
 
@@ -467,7 +460,7 @@ Periodo 8 & 4.295 & 0.022 & -0.007\\
 \includegraphics[width=0.45\textwidth]{Figures/F12_1} & \includegraphics[width=0.45\textwidth]{Figures/F12_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F12_3} & \includegraphics[width=0.45\textwidth]{Figures/F12_4} 
 \decoRule
-\caption[Evaluación de las Diferencias Relativas entre creencias y elecciones en los participantes D y E en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Relativas computadas entre las creencias y las elecciones de los participantes D y E en el Subjuego 2, se presenta la comparación entre las densidades de probabilidad de las distribuciones prior (hipótesis nula) y posterior (hipótesis alterna) computadas por cada periodo, en el punto de no diferencia ($\delta = 0$).}
+\caption[Evaluación de las Diferencias Relativas entre creencias y elecciones en los participantes D y E en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Relativas computadas para los participantes D y E en el Subjuego 2, se presenta la comparación entre las distribuciones prior y posterior computadas por periodo, en el punto de no diferencias.}
 \label{fig:DR_S2_DyE}
 \end{figure}  
 
@@ -516,7 +509,7 @@ Periodo 8 & 0.048 & 3.096e^-4 & 0.372\\
 \includegraphics[width=0.45\textwidth]{Figures/F17_1} & \includegraphics[width=0.45\textwidth]{Figures/F17_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F17_3} & \includegraphics[width=0.45\textwidth]{Figures/F17_4} 
 \decoRule
-\caption[Evaluación de las Diferencias Relativas entre creencias (omitiendo la multiplicación por $p$) y elecciones en los participantes A en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Relativas computadas entre las creencias y las elecciones de los participantes A en el Subjuego 2 cuando sus creencias no eran multiplicadas por $p$, se presenta la comparación entre las densidades de probabilidad de las distribuciones prior (hipótesis nula) y posterior (hipótesis alterna) computadas por cada periodo, en el punto de no diferencia ($\delta = 0$).}
+\caption[Evaluación de las Diferencias Relativas entre creencias (omitiendo la multiplicación por $p$) y elecciones en los participantes A en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Relativas computadas para los participantes A en el Subjuego 2 sin la multiplicación por $p$, se presenta la comparación entre las distribuciones prior y posterior computadas por periodo, en el punto $\delta = 0$.}
 \label{fig:DRnop_S2_A}
 \end{figure}  
 
@@ -526,7 +519,7 @@ Periodo 8 & 0.048 & 3.096e^-4 & 0.372\\
 \includegraphics[width=0.45\textwidth]{Figures/F18_1} & \includegraphics[width=0.45\textwidth]{Figures/F18_2} 
 \includegraphics[width=0.45\textwidth]{Figures/F18_3} & \includegraphics[width=0.45\textwidth]{Figures/F18_4} 
 \decoRule
-\caption[Evaluación de las Diferencias Relativas entre creencias (omitiendo la multiplicación por $p$) y elecciones en los participantes D y E en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Relativas computadas entre las creencias y las elecciones de los participantes D y E en el Subjuego 2, sin multiplicar sus creencias por $p$, se presenta la comparación entre las densidades de probabilidad de las distribuciones prior (hipótesis nula) y posterior (hipótesis alterna) computadas por cada periodo, en el punto de no diferencia ($\delta = 0$).}
+\caption[Evaluación de las Diferencias Relativas entre creencias (omitiendo la multiplicación por $p$) y elecciones en los participantes D y E en el Subjuego 2 (Factor de Bayes)]{Como resultado de la evaluación de las Diferencias Relativas computadas para los participantes D y E sin la multiplicación  por $p$, se presenta la comparación entre las densidades de probabilidad de las distribuciones prior y posterior en el punto de no diferencia.}
 \label{fig:DRnop_S2_DyE}
 \end{figure}  
 
