@@ -9,7 +9,7 @@ for (a in 1:8){
   lines(c(-10,110), c(-10,110), col="Black")
   text(10,90,paste("Periodo ", a),cex=1.2, font=2)
   for (b in 1:10){
-    points(C1[a,b],BO1[a,b],cex=1,pch=16,col="red")
+    points(C1[a,b],BO1[a,b],cex=1,pch=16,col="black")
     points(C2[a,b],BO2[a,b],cex=1,pch=16,col="black")
     points(C3[a,b],BO3[a,b],cex=1,pch=16,col="black")
     #points(C1[a,3],BO1[a,3],cex=1,pch=16,col="blue")
