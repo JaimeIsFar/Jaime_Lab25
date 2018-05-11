@@ -101,7 +101,7 @@ plot(c(4,5),MC1[4:5],type="l",lty=3,lwd=3,pch=1,cex=1,col="black",xlab="Periodo"
   
   for(a in 1:4){
     plot(C1[a,],C1[a+1,],type="p",lty=1,lwd=4,pch=20,cex=1,col="black",xlab=paste("Elección en Periodo ",a),
-         ylab=paste("Elección en Periodo ",a+1),xlim=c(0,100),ylim=c(0,100))
+         ylab=paste("Elección en Periodo ",a+1),xlim=c(0,100),ylim=c(0,100), cex.lab=1.4)
     lines(c(-10,110), c(-10,110), col="Black")
   }
   
