@@ -44,7 +44,7 @@ C12[a,b] <- mean(c(C1[a,b],C2[a,b]))
 
 for (a in 1:8){
   plot(1,type="n",xlim=c(0,100),ylim=c(0,100),xaxp=c(0,100,10),yaxp=c(0,100,10),
-       xlab="Número de otros jugadores",ylab="Creencia",main="")
+       xlab="Número de otros jugadores",ylab="Creencia",main="", cex.lab=1.3)
   lines(c(-10,110), c(-10,110), col="Black")
   lines(c(0,95), c(5,100), lty=3, col="Black")
   lines(c(5,100), c(0,95), lty=3, col="Black")
@@ -58,7 +58,7 @@ for (a in 1:8){
 
 for (a in 1:8){
   plot(1,type="n",xlim=c(0,100),ylim=c(0,100),xaxp=c(0,100,10),yaxp=c(0,100,10),
-       xlab="Número de otros jugadores",ylab="Creencia",main="")
+       xlab="Número de otros jugadores",ylab="Creencia",main="", cex.lab=1.3)
   lines(c(-10,110), c(-10,110), col="Black")
   lines(c(0,95), c(5,100), lty=3, col="Black")
   lines(c(5,100), c(0,95), lty=3, col="Black")
